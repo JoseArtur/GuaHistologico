@@ -2,6 +2,7 @@
 // components/Header.tsx
 import Link from 'next/link';
 import { useState } from 'react';
+import Menu from './Menu';
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -20,11 +21,7 @@ export default function Header() {
           <span></span>
           <span></span>
         </button>
-        <div className={`menu ${menuVisible ? 'visible' : ''}`} id="menu">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
+        <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} /> {/* Pass toggleMenu function */}
       </nav>
       <style jsx>{`
         header {
