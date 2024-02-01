@@ -26,7 +26,7 @@ export default function Header() {
       <style jsx>{`
         header {
           background-color: purple;
-          padding: 20px;
+          padding: 40px 30px;
           color: white;
         }
         nav {
