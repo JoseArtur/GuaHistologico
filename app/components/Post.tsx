@@ -52,6 +52,13 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
                 }
                 .image-layout {
                     flex: 0.6; // Adjusted to make the div take up 60% of the row
+                    height: 300px; // Set a fixed height for the div
+                    overflow: hidden; // Hide the part of the image that exceeds the div's size
+                }
+                .image-layout img {
+                    width: 100%; // Make the image take up the full width of its parent div
+                    height: 100%; // Make the image take up the full height of its parent div
+                    object-fit: cover; // Maintain the aspect ratio of the image
                 }
                 .title-large, .title-extra-large {
                     display: none;
