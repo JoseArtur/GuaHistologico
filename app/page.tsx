@@ -1,7 +1,20 @@
+// pages/index.tsx
+import React from 'react';
 import Header from './components/Header';
+import Post from './components/Post';
 
-export default function Home() {
+const HomePage: React.FC = () => {
   return (
-   <Header />
+    <div className="home-page">
+      <Header/>
+      <Post 
+        imageUrl="https://example.com/image.jpg" 
+        description="This is a description of the image." 
+        title="An-My Lê"
+      />
+      {/* Other components and elements */}
+    </div>
   );
-}
+};
+
+export default HomePage;
