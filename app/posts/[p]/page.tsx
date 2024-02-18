@@ -1,7 +1,7 @@
 "use client";
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from "react";
-import DataType from "./utils/DataType";
+import DataType from "../../utils/DataType";
 
 export default function Page({ params }: { params: { p: string } }) {
   const [data, setData] = useState<DataType[]>([]);
