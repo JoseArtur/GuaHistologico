@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Menu from './Menu';
 import { FiSearch } from 'react-icons/fi';
-import '@/styles/globals.css';
+import '@/styles/globals.css'
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -31,7 +31,7 @@ export default function Header() {
         <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} /> {/* Pass toggleMenu function */}
       </nav>
        </header>
-          <div style={{paddingTop:'140px'}}></div>
+          <div style={{paddingTop:'63px'}}></div>
           </> 
   );
 }
