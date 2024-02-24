@@ -22,62 +22,18 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed, bgColor }) => {
     return (
-        
-        <a className={`photo-description ${reversed ? 'reversed' : ''}`} href={pageUrl} style = {{paddingBottom: '10px'}}>
-            <div className="layout">
-                {/* Existing div */}
-                <div className="inner-layout" style={{ backgroundColor: bgColor }}>
-                      <h3 className="title-large">{title}</h3> {/* Removed the extra div and p tag */}
-                    <div className="description">
+        <a className={`photo-description ${reversed ? 'reversed' : ''}`} href={pageUrl} style={{ paddingBottom: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className="layout" style={{ display: 'flex', width: '100%', height: 'auto', backgroundColor: 'lightgray', flexDirection: reversed ? 'row-reverse' : 'row' }}>
+                <div className="inner-layout" style={{ backgroundColor: bgColor, flex: 0.3, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '32px 48px' }}>
+                    <h3 className="title-large" style={{ fontSize: '4em', fontWeight: 'bold' }}>{title}</h3>
+                    <div className="description" style={{ marginTop: '10px' }}>
                         <p>{description}</p>
                     </div>
                 </div>
-                {/* New div for the image */}
-                <div className="image-layout">
-                    <Image height={500} width={10000} src={imageUrl} alt={description} />
+                <div className="image-layout" style={{ flex: 0.7, height: '500px', overflow: 'hidden' }}>
+                    <Image height={500} width={10000} src={imageUrl} alt={description} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
             </div>
-            <style jsx>{`
-                .photo-description {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .photo-description.reversed .layout {
-                    flex-direction: row-reverse; // Reverse the order of the children
-                }
-                .layout {
-                    display: flex; // Added to make the divs share the same row
-                    width: 100%;
-                    height: auto;
-                    background-color: lightgray;
-                }
-                .inner-layout {
-                    flex: 0.3; // Adjusted to make the div take up 40% of the row
-                    display: flex;
-                    flex-direction: column;
-                
-                    justify-content: space-between;
-                    padding: 32px 48px;
-                }
-                .image-layout {
-                    flex: 0.7; // Adjusted to make the div take up 60% of the row
-                    height: 500px; // Set a fixed height for the div
-                    overflow: hidden; // Hide the part of the image that exceeds the div's size
-                }
-                .image-layout Image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-                .title-large {
-                    font-size: 4em;
-                    font-weight: bold;
-                }
-                .description {
-                    margin-top: 10px;
-                }
-            `}</style>
         </a>
     );
 };
