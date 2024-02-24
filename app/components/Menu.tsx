@@ -22,14 +22,16 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
       }
     };
 
-    // Add the event listener
-    document.addEventListener('mousedown', handleClickOutside);
+    console.log(menuVisible);
+    if (menuVisible) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
 
     // Remove the event listener when the component unmounts
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [toggleMenu]);
+  }, [toggleMenu, menuVisible]);
 
   return (
     <>

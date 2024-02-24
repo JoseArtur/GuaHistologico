@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
       />
       {/* Other components and elements */}
     </div>
-      <div>
+      { <div>
         {data.map((item, index) => (
           <div key={index}>
             <h2>{item.title}</h2>
@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         ))}
-      </div>
+      </div> }
     </>
   );
 };
