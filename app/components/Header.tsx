@@ -1,4 +1,3 @@
-"use client";
 // components/Header.tsx
 import Link from 'next/link';
 import { useState } from 'react';
@@ -16,7 +15,7 @@ export default function Header() {
     <header>
       <nav>
         <div className="logo"><Link href="/">
-      BioScape
+      Guia Histológico
     
     </Link></div>
 

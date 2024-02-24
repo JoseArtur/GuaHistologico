@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import DataType from "../../utils/DataType";
 import Header from "@/app/components/Header";
 import Carousel from "@itseasy21/react-elastic-carousel";
+import Image from "next/image";
 
 export default function Page({ params }: { params: { p: string } }) {
   const [data, setData] = useState<DataType[]>([]);
@@ -66,9 +67,9 @@ export default function Page({ params }: { params: { p: string } }) {
             <button className="b2">Animate 2</button>
             <button className="reset">Reset</button>  </div>
             <div className="relative">
-              <img className="photo-1" src={post.primary_image} alt={post.title} />
-              <img className="photo-2" src={post.secondary_images[0]} alt={post.title} />
-              <img className="photo-3" src={post.secondary_images[1]} alt={post.title} />
+              <Image  fill={true} className="photo-1" src={post.primary_image} alt={post.title} />
+              <Image fill={true} className="photo-2" src={post.secondary_images[0]} alt={post.title} />
+              <Image fill={true} className="photo-3" src={post.secondary_images[1]} alt={post.title} />
             </div>
             {params.p}
           </div>
@@ -102,7 +103,7 @@ export default function Page({ params }: { params: { p: string } }) {
   height: 500px;
 }
 
-img {
+Image {
   width: 100%;
   height: 100%;
   max-widht: 100%;

@@ -1,6 +1,6 @@
-"use client";
 // Post.tsx
 import React from 'react';
+import Image from 'next/image';
 
 export enum BgColor {
     LightBlue = 'lightblue',
@@ -34,7 +34,7 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                 </div>
                 {/* New div for the image */}
                 <div className="image-layout">
-                    <img src={imageUrl} alt={description} />
+                    <Image height={500} width={10000} src={imageUrl} alt={description} />
                 </div>
             </div>
             <style jsx>{`
@@ -56,6 +56,7 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                     flex: 0.3; // Adjusted to make the div take up 40% of the row
                     display: flex;
                     flex-direction: column;
+                
                     justify-content: space-between;
                     padding: 32px 48px;
                 }
@@ -64,7 +65,7 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                     height: 500px; // Set a fixed height for the div
                     overflow: hidden; // Hide the part of the image that exceeds the div's size
                 }
-                .image-layout img {
+                .image-layout Image {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;

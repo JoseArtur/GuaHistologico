@@ -35,7 +35,7 @@ const TecidosPage: React.FC = () => {
         bgColor={BgColor.LightYellow}
       />
        <Post 
-        imageUrl="https://mol.icb.usp.br/wp-content/uploads/9-3.jpg" 
+        imageUrl="/images/orgao_esofago_dummy.jpg" 
         description="" 
         title="Tecido Nervoso"
         pageUrl="/tecidos/tecido-nervoso"
