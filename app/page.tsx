@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
        <div className="home-page">
       <Header/>
       <Post 
-        imageUrl="https://c0.wallpaperflare.com/preview/522/920/44/muscle-skeletal-biopsy-light.jpg" 
+        imageUrl="/images/orgao_intestino_delgado_dummy.tif" 
         description="This is a description of the image." 
         title="Órgãos"
         pageUrl="/tecidos/tecido-conjuntivo"
@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
         bgColor={BgColor.LightBlue}
       />
       <Post 
-        imageUrl="https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?cs=srgb&dl=pexels-lex-photography-450597.jpg&fm=jpg" 
+        imageUrl="/images/orgao_esofago_dummy.jpg" 
         description="This is a description of the image." 
         title="Tecidos"
         pageUrl="/tecidos/tecido-conjuntivo"
@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
         bgColor={BgColor.LightCoral}
       />
       <Post 
-        imageUrl="https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?cs=srgb&dl=pexels-lex-photography-450597.jpg&fm=jpg" 
+        imageUrl="/images/tecido_conjuntivo_dummy.jpg" 
         description="This is a description of the image." 
         title="Estruturas"
         pageUrl="/tecidos/tecido-conjuntivo"
