@@ -11,15 +11,15 @@ const HomePage: React.FC = () => {
        <div className="home-page">
       <Header/>
       <Post 
-        imageUrl="https://c0.wallpaperflare.com/preview/522/920/44/muscle-skeletal-biopsy-light.jpg" 
+        imageUrl="/images/orgao_intestino_delgado_dummy.jpg" 
         description="" 
         title="Órgãos"
-        pageUrl="/tecidos/tecido-conjuntivo"
+        pageUrl="/"
         reversed={false}
         bgColor={BgColor.LightBlue}
       />
       <Post 
-        imageUrl="https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?cs=srgb&dl=pexels-lex-photography-450597.jpg&fm=jpg" 
+        imageUrl="/images/orgao_esofago_dummy.jpg" 
         description="" 
         title="Tecidos"
         pageUrl="/tecidos"
@@ -27,10 +27,10 @@ const HomePage: React.FC = () => {
         bgColor={BgColor.White}
       />
       <Post 
-        imageUrl="https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?cs=srgb&dl=pexels-lex-photography-450597.jpg&fm=jpg" 
+        imageUrl="/images/tecido_conjuntivo_dummy.jpg" 
         description="" 
         title="Estruturas"
-        pageUrl="/tecidos/tecido-conjuntivo"
+        pageUrl="/"
         reversed={false}
         bgColor={BgColor.LightYellow}
       />

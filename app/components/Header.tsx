@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Menu from './Menu';
+import { FiSearch } from 'react-icons/fi';
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -18,7 +19,9 @@ export default function Header() {
       BioScape
     
     </Link></div>
+
         <div className="spacer"></div>
+      <FiSearch size={30} style={{ marginRight  : '30px' }}/> 
         <button onClick={toggleMenu} className={`hamburger ${menuVisible ? 'active' : ''}`}>
           <span></span>
           <span></span>
@@ -41,6 +44,11 @@ export default function Header() {
           font-size: 2em;
           font-weight: bold;
         }
+        .search {
+          font-size: 1.5em;
+          color: white;
+          cursor: pointer;
+        }
         .spacer {
           flex-grow: 1;
         }
@@ -48,7 +56,7 @@ export default function Header() {
           background: none;
           border: none;
           color: white;
-          font-size: 1.2em;
+          font-size: 20.2px;
           cursor: pointer;
           display: flex;
           flex-direction: column;
