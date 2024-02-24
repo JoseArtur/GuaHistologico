@@ -17,6 +17,7 @@ const HomePage: React.FC = () => {
         pageUrl="/"
         reversed={false}
         bgColor={BgColor.LightBlue}
+        
       />
       <Post 
         imageUrl="/images/orgao_esofago_dummy.jpg" 

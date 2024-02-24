@@ -1,4 +1,5 @@
 // components/Header.tsx
+
 import Link from 'next/link';
 import { useState } from 'react';
 import Menu from './Menu';
@@ -12,8 +13,8 @@ export default function Header() {
   };
 
   return (
-    <header>
-      <nav>
+   <><header  style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000}}>
+      <nav >
         <div className="logo"><Link href="/">
       Guia Histológico
     
@@ -33,8 +34,10 @@ export default function Header() {
           background-color: purple;
           padding: 40px 30px;
           color: white;
+          
         }
         nav {
+    
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -98,5 +101,7 @@ export default function Header() {
         }
       `}</style>
     </header>
+          <div style={{paddingTop:'140px'}}></div>
+          </> 
   );
 }

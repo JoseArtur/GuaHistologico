@@ -23,7 +23,7 @@ interface PostProps {
 const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed, bgColor }) => {
     return (
         
-        <a className={`photo-description ${reversed ? 'reversed' : ''}`} href={pageUrl}>
+        <a className={`photo-description ${reversed ? 'reversed' : ''}`} href={pageUrl} style = {{paddingBottom: '10px'}}>
             <div className="layout">
                 {/* Existing div */}
                 <div className="inner-layout" style={{ backgroundColor: bgColor }}>
