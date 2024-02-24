@@ -2,20 +2,29 @@
 // Post.tsx
 import React from 'react';
 
+export enum BgColor {
+    LightBlue = 'lightblue',
+    LightGreen = 'lightgreen',
+    LightYellow = 'lightyellow',
+    LightCoral = 'lightcoral',
+    LightGray = 'lightgray',
+}
+
 interface PostProps {
     imageUrl: string;
     description: string;
     title: string;
     pageUrl: string;
     reversed: boolean;
+    bgColor: BgColor;
 }
 
-const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed }) => {
+const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed, bgColor }) => {
     return (
         <div className={`photo-description ${reversed ? 'reversed' : ''}`}>
             <div className="layout">
                 {/* Existing div */}
-                <div className="inner-layout">
+                <div className="inner-layout" style={{ backgroundColor: bgColor }}>
                    <a href={pageUrl}>
                       <h3 className="title-large">{title}</h3> {/* Removed the extra div and p tag */}
                    </a>
@@ -41,28 +50,28 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                     display: flex; // Added to make the divs share the same row
                     width: 100%;
                     height: auto;
-                    background-color: lightgray; // Added background color
+                    background-color: lightgray;
                 }
                 .inner-layout {
-                    flex: 0.4; // Adjusted to make the div take up 40% of the row
+                    flex: 0.3; // Adjusted to make the div take up 40% of the row
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    background-color: lightblue; // Added background color
+                    padding: 32px 48px;
                 }
                 .image-layout {
-                    flex: 0.6; // Adjusted to make the div take up 60% of the row
-                    height: 300px; // Set a fixed height for the div
+                    flex: 0.7; // Adjusted to make the div take up 60% of the row
+                    height: 400px; // Set a fixed height for the div
                     overflow: hidden; // Hide the part of the image that exceeds the div's size
                 }
                 .image-layout img {
-                    width: 100%; // Make the image take up the full width of its parent div
-                    height: 100%; // Make the image take up the full height of its parent div
-                    object-fit: cover; // Maintain the aspect ratio of the image
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
                 .title-large {
-                    font-size: 2em; // Make the title bigger
-                    font-weight: bold; // Make the title bold
+                    font-size: 2em;
+                    font-weight: bold;
                 }
                 .description {
                     margin-top: 10px;
