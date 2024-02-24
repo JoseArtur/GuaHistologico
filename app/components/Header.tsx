@@ -103,7 +103,7 @@ export default function Header() {
             <span style={menuVisible ? activeHamburgerSpanStyle : hamburgerSpanStyle}></span>
             <span style={hamburgerSpanStyle}></span>
           </button>
-          <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} style={menuVisible ? visibleMenuStyle : menuStyle} />
+          <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} />
         </nav>
       </header>
       <div style={{ paddingTop: '140px' }}></div>
