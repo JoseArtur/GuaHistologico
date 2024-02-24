@@ -14,7 +14,10 @@ export default function Header() {
   return (
     <header>
       <nav>
-        <div className="logo">BioScape</div>
+        <div className="logo"><Link href="/">
+      BioScape
+    
+    </Link></div>
         <div className="spacer"></div>
         <button onClick={toggleMenu} className={`hamburger ${menuVisible ? 'active' : ''}`}>
           <span></span>
@@ -35,7 +38,7 @@ export default function Header() {
           align-items: center;
         }
         .logo {
-          font-size: 1.5em;
+          font-size: 2em;
           font-weight: bold;
         }
         .spacer {

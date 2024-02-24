@@ -8,6 +8,7 @@ export enum BgColor {
     LightYellow = 'lightyellow',
     LightCoral = 'lightcoral',
     LightGray = 'lightgray',
+    White = 'white',
 }
 
 interface PostProps {
@@ -21,13 +22,12 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed, bgColor }) => {
     return (
-        <div className={`photo-description ${reversed ? 'reversed' : ''}`}>
+        
+        <a className={`photo-description ${reversed ? 'reversed' : ''}`} href={pageUrl}>
             <div className="layout">
                 {/* Existing div */}
                 <div className="inner-layout" style={{ backgroundColor: bgColor }}>
-                   <a href={pageUrl}>
                       <h3 className="title-large">{title}</h3> {/* Removed the extra div and p tag */}
-                   </a>
                     <div className="description">
                         <p>{description}</p>
                     </div>
@@ -61,7 +61,7 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                 }
                 .image-layout {
                     flex: 0.7; // Adjusted to make the div take up 60% of the row
-                    height: 400px; // Set a fixed height for the div
+                    height: 500px; // Set a fixed height for the div
                     overflow: hidden; // Hide the part of the image that exceeds the div's size
                 }
                 .image-layout img {
@@ -70,14 +70,14 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                     object-fit: cover;
                 }
                 .title-large {
-                    font-size: 2em;
+                    font-size: 4em;
                     font-weight: bold;
                 }
                 .description {
                     margin-top: 10px;
                 }
             `}</style>
-        </div>
+        </a>
     );
 };
 
