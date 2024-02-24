@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Menu from './Menu';
 import { FiSearch } from 'react-icons/fi';
-import '@/app/styles.css';
+import '@/styles/globals.css';
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
