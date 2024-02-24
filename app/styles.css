@@ -1,0 +1,116 @@
+header {
+    background-color: purple;
+    padding: 40px 30px;
+    color: white;
+    
+  }
+  nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .search {
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+  }
+  .spacer {
+    flex-grow: 1;
+  }
+  .hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20.2px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    z-index: 1000;
+  }
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .menu {
+    display: none;
+    gap: 10px;
+  }
+  .menu.visible {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: purple;
+    padding: 20px;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .photo-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Reverse the order of the children */
+.photo-description.reversed .layout {
+    flex-direction: row-reverse;  
+}
+/*  Added to make the divs share the same row*/
+.layout {
+    display: flex; 
+    width: 100%;
+    height: auto;
+    background-color: lightgray;
+}
+/* Adjusted to make the div take up 40% of the row */
+.inner-layout {
+    flex: 0.3; 
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    padding: 32px 48px;
+}
+/* Adjusted to make the div take up 60% of the row 
+    and to set a fixed height for the div 
+    and to hide the part of the image that exceeds the div's size 
+*/
+.image-layout {
+    flex: 0.7; 
+    height: 500px;
+    overflow: hidden; 
+}
+.image-layout Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title-large {
+    font-size: 4em;
+    font-weight: bold;
+}
+.description {
+    margin-top: 10px;
+}
