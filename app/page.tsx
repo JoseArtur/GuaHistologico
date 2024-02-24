@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
       <Post 
         imageUrl="/images/tecido_conjuntivo_dummy.jpg" 
         description="" 
-        title="Estruturas"
+        title="Estruturas e Células"
         pageUrl="/"
         reversed={false}
         bgColor={BgColor.LightYellow}

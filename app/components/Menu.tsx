@@ -40,7 +40,7 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           <Link href="/">Home</Link>
           <Link href="/orgaos">Órgãos</Link>
           <Link href="/tecidos">Tecidos</Link>
-          <Link href="/estruturas">Estruturas</Link>
+          <Link href="/estruturas">Estruturas e Células</Link>
         </div>
       </div>
       <style jsx>{`
