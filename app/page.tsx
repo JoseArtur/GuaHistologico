@@ -31,11 +31,11 @@ const HomePage: React.FC = () => {
       <Post 
         imageUrl="https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?cs=srgb&dl=pexels-lex-photography-450597.jpg&fm=jpg" 
         description="This is a description of the image." 
-        title="An-My Lê"
+        title="Tecido Conjuntivo"
       />
       {/* Other components and elements */}
     </div>
-      { <div>
+      {/* { <div>
         {data.map((item, index) => (
           <div key={index}>
             <h2>{item.title}</h2>
@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         ))}
-      </div> }
+      </div> } */}
     </>
   );
 };

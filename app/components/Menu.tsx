@@ -22,7 +22,6 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
       }
     };
 
-    console.log(menuVisible);
     if (menuVisible) {
       document.addEventListener('mousedown', handleClickOutside);
     }

@@ -14,14 +14,9 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
             <div className="layout">
                 {/* Existing div */}
                 <div className="inner-layout">
-                    <h3>
-                        <div className="title-large">
-                            <p>{title}</p>
-                        </div>
-                        <div className="title-extra-large">
-                            <p>{title}</p>
-                        </div>
-                    </h3>
+                   <a href={imageUrl}>
+                      <h3 className="title-large">{title}</h3> {/* Removed the extra div and p tag */}
+                   </a>
                     <div className="description">
                         <p>{description}</p>
                     </div>
@@ -60,18 +55,9 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
                     height: 100%; // Make the image take up the full height of its parent div
                     object-fit: cover; // Maintain the aspect ratio of the image
                 }
-                .title-large, .title-extra-large {
-                    display: none;
-                }
-                @media (min-width: 375px) {
-                    .title-large {
-                        display: block;
-                    }
-                }
-                @media (min-width: 1280px) {
-                    .title-extra-large {
-                        display: block;
-                    }
+                .title-large {
+                    font-size: 2em; // Make the title bigger
+                    font-weight: bold; // Make the title bold
                 }
                 .description {
                     margin-top: 10px;
