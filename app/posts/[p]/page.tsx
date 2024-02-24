@@ -2,6 +2,7 @@
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from "react";
 import DataType from "../../utils/DataType";
+import Header from "@/app/components/Header";
 
 export default function Page({ params }: { params: { p: string } }) {
   const [data, setData] = useState<DataType[]>([]);
@@ -53,7 +54,8 @@ export default function Page({ params }: { params: { p: string } }) {
   }, []);
 
   return (
-    <><div >
+    <><div className="post-page" >
+      <Header/>
       My Post: <div className="relative">
         <img className="photo-1" src={data[0]?.primary_image} alt={data[0]?.title} />
         <img className="photo-2" src={data[0]?.secondary_images[0]} alt={data[0]?.title} />
