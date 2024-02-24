@@ -6,15 +6,17 @@ interface PostProps {
     imageUrl: string;
     description: string;
     title: string;
+    pageUrl: string;
+    reversed: boolean;
 }
 
-const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
+const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed }) => {
     return (
-        <div className="photo-description">
+        <div className={`photo-description ${reversed ? 'reversed' : ''}`}>
             <div className="layout">
                 {/* Existing div */}
                 <div className="inner-layout">
-                   <a href={imageUrl}>
+                   <a href={pageUrl}>
                       <h3 className="title-large">{title}</h3> {/* Removed the extra div and p tag */}
                    </a>
                     <div className="description">
@@ -31,6 +33,9 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                }
+                .photo-description.reversed .layout {
+                    flex-direction: row-reverse; // Reverse the order of the children
                 }
                 .layout {
                     display: flex; // Added to make the divs share the same row
