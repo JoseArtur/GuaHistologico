@@ -1,82 +1,39 @@
-"use client";
 // Post.tsx
 import React from 'react';
+import Image from 'next/image';
+
+export enum BgColor {
+    LightBlue = 'lightblue',
+    LightGreen = 'lightgreen',
+    LightYellow = 'lightyellow',
+    LightCoral = 'lightcoral',
+    LightGray = 'lightgray',
+    White = 'white',
+}
 
 interface PostProps {
     imageUrl: string;
     description: string;
     title: string;
+    pageUrl: string;
+    reversed: boolean;
+    bgColor: BgColor;
 }
 
-const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
+const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed, bgColor }) => {
     return (
-        <a href={imageUrl} className="photo-description">
-            <div className="layout">
-                {/* Existing div */}
-                <div className="inner-layout">
-                    <h3>
-                        <div className="title-large">
-                            <p>{title}</p>
-                        </div>
-                        <div className="title-extra-large">
-                            <p>{title}</p>
-                        </div>
-                    </h3>
-                    <div className="description">
+        <a className={`photo-description ${reversed ? 'reversed' : ''}`} href={pageUrl} style={{ paddingBottom: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className="layout" style={{ display: 'flex', width: '100%', height: 'auto', backgroundColor: 'lightgray', flexDirection: reversed ? 'row-reverse' : 'row' }}>
+                <div className="inner-layout" style={{ backgroundColor: bgColor, flex: 0.3, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '32px 48px' }}>
+                    <h3 className="title-large" style={{ fontSize: '4em', fontWeight: 'bold' }}>{title}</h3>
+                    <div className="description" style={{ marginTop: '10px' }}>
                         <p>{description}</p>
                     </div>
                 </div>
-                {/* New div for the image */}
-                <div className="image-layout">
-                    <img src={imageUrl} alt={description} />
+                <div className="image-layout" style={{ flex: 0.7, height: '500px', overflow: 'hidden' }}>
+                    <Image height={500} width={10000} src={imageUrl} alt={description} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
             </div>
-            <style jsx>{`
-                .photo-description {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .layout {
-                    display: flex; // Added to make the divs share the same row
-                    width: 100%;
-                    height: auto;
-                    background-color: lightgray; // Added background color
-                }
-                .inner-layout {
-                    flex: 0.4; // Adjusted to make the div take up 40% of the row
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    background-color: lightblue; // Added background color
-                }
-                .image-layout {
-                    flex: 0.6; // Adjusted to make the div take up 60% of the row
-                    height: 300px; // Set a fixed height for the div
-                    overflow: hidden; // Hide the part of the image that exceeds the div's size
-                }
-                .image-layout img {
-                    width: 100%; // Make the image take up the full width of its parent div
-                    height: 100%; // Make the image take up the full height of its parent div
-                    object-fit: cover; // Maintain the aspect ratio of the image
-                }
-                .title-large, .title-extra-large {
-                    display: none;
-                }
-                @media (min-width: 375px) {
-                    .title-large {
-                        display: block;
-                    }
-                }
-                @media (min-width: 1280px) {
-                    .title-extra-large {
-                        display: block;
-                    }
-                }
-                .description {
-                    margin-top: 10px;
-                }
-            `}</style>
         </a>
     );
 };

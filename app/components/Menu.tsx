@@ -22,14 +22,15 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
       }
     };
 
-    // Add the event listener
-    document.addEventListener('mousedown', handleClickOutside);
+    if (menuVisible) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
 
     // Remove the event listener when the component unmounts
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [toggleMenu]);
+  }, [toggleMenu, menuVisible]);
 
   return (
     <>
@@ -39,7 +40,7 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           <Link href="/">Home</Link>
           <Link href="/orgaos">Órgãos</Link>
           <Link href="/tecidos">Tecidos</Link>
-          <Link href="/estruturas">Estruturas</Link>
+          <Link href="/estruturas">Estruturas e Células</Link>
         </div>
       </div>
       <style jsx>{`
