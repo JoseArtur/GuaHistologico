@@ -10,7 +10,7 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
     return (
-        <a href={imageUrl} className="photo-description">
+        <div className="photo-description">
             <div className="layout">
                 {/* Existing div */}
                 <div className="inner-layout">
@@ -63,7 +63,7 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title }) => {
                     margin-top: 10px;
                 }
             `}</style>
-        </a>
+        </div>
     );
 };
 
