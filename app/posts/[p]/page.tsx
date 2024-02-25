@@ -47,6 +47,7 @@ export default function Page({ params }: { params: { p: string } }) {
     }
     if (data) {
       setData(data);
+      console.log(data);
       const initialOpacities = new Map();
 
       for (let i = 0; i < data.length; i++) {
@@ -68,8 +69,9 @@ export default function Page({ params }: { params: { p: string } }) {
     <>
       <Header />
       <div className="post-page">
+      <h1 className="text-center text-5xl font-bold mb-20 border-gray-200">
         Tecido {params.p}
-        <Carousel className="carousel" isRTL={false} enableSwipe={false}>
+      </h1>        <Carousel className="carousel" isRTL={false} enableSwipe={false}>
           {data.map((post, index) => (
             <div key={index} className="carousel-item">
               <div className="button-container">
@@ -86,10 +88,11 @@ export default function Page({ params }: { params: { p: string } }) {
                     <label
                       htmlFor={`toggle${index}-${i + 1}`}
                       className="toggle-label"
-                      
-                    >
-                      Animate {i + 1}
+                                          >
                     </label>
+                    <div className="toggle-name">
+                    {post.secondary_images_names[i]}
+                          </div>
                   </div>
                 ))}
               </div>
@@ -121,14 +124,14 @@ export default function Page({ params }: { params: { p: string } }) {
        .toggle-switch {
         position: relative;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+
       
         align-items: center; /* Note: 'space-between' is not a valid value for align-items */
-        width: 4em;
-        height: 5vh;
-        margin-top: 4vh;
-        border: 1px solid #ccc;
-
+        width: 30vw;
+        height: 4vh;
+        margin-bottom: 0.2em;
+        
       }
       
       .toggle-input {
@@ -137,6 +140,12 @@ export default function Page({ params }: { params: { p: string } }) {
         width: 0;
         height: 0;
         
+      }
+    
+      .toggle-name{
+        font-size: 0.7em;
+        margin-left: 4px;
+        text-wrap: pretty;
       }
       
       .toggle-label {
@@ -148,8 +157,8 @@ export default function Page({ params }: { params: { p: string } }) {
         border-radius: 3em;
         width: 60px;
         height: 34px;
-        padding-right:2em;
-        
+        margin-right:10px;
+        margin-left:10px;
       }
 
       .toggle-input:checked + .toggle-label {
@@ -177,26 +186,22 @@ export default function Page({ params }: { params: { p: string } }) {
 
         .carousel-item {
           display: flex;
+          flex-direction: row;
+          align-items: center;
         }
         .post-page {
-          margin-top: 15.625vh;
-          margin-left: 12.5vw;
-          margin-right: 12.5vw;
+          margin-top: 5.625vh;
+          margin-left: 5.5vw;
+          margin-right: 5.5vw;
           text-align: center; /* center the text */
           font-size: 2em; /* make the text larger */
         }
 
-        .button-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        
         .relative {
           position: relative;
-          margin-left: 10.625vw;
-          width: 28.125vw;
-          height: 28.125vh;
+          margin-left: 3.625vw;
+          width: 1000px;
+          height: 1000px;
         }
   
       `}</style>

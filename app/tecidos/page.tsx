@@ -14,7 +14,7 @@ const TecidosPage: React.FC = () => {
         imageUrl="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/tecido-epitelial-5c4ae01996371.jpg" 
         description="" 
         title="Tecido Epitelial"
-        pageUrl="/tecidos/tecido-epitelial"
+        pageUrl="/tecidos/epitelial"
         reversed={false}
         bgColor={BgColor.LightBlue}
       />
@@ -22,7 +22,7 @@ const TecidosPage: React.FC = () => {
         imageUrl="https://static.biologianet.com/2020/02/tecido-conjuntivo-denso.jpg" 
         description="" 
         title="Tecido Conjutivo"
-        pageUrl="/tecidos/tecido-conjuntivo"
+        pageUrl="/tecidos/conjuntivo"
         reversed={true}
         bgColor={BgColor.White}
       />
@@ -30,7 +30,7 @@ const TecidosPage: React.FC = () => {
         imageUrl="https://s4.static.brasilescola.uol.com.br/be/2020/02/tecido-muscular.jpg" 
         description="" 
         title="Tecido Muscular"
-        pageUrl="/tecidos/tecido-muscular"
+        pageUrl="/tecidos/muscular"
         reversed={false}
         bgColor={BgColor.LightYellow}
       />
@@ -38,7 +38,7 @@ const TecidosPage: React.FC = () => {
         imageUrl="/images/orgao_esofago_dummy.jpg" 
         description="" 
         title="Tecido Nervoso"
-        pageUrl="/tecidos/tecido-nervoso"
+        pageUrl="/tecidos/nervoso"
         reversed={true}
         bgColor={BgColor.LightCoral}
       />
