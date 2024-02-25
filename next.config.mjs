@@ -22,7 +22,7 @@ const nextConfig = {    images: {
           },
         {
             protocol: 'https',
-            hostname: 'mol.icb.usp.br',
+            hostname: 'i.ibb.co',
             port: '',
           },
  ],}, };
