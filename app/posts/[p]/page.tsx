@@ -41,7 +41,7 @@ export default function Page({ params }: { params: { p: string } }) {
   };
 
   const getNewView = async () => {
-    const { data, error } = await supabase.from("post").select("*").eq("title", params.p);
+    const { data, error } = await supabase.from("post").select("*");
     if (error) {
       console.log(error);
     }

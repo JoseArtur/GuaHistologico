@@ -29,7 +29,7 @@ const ConjuntivoPage: React.FC = () => {
                 <Card
                   src="https://s4.static.brasilescola.uol.com.br/be/2020/02/tecido-muscular.jpg"
                   alt=""
-                  href="/tecidos/conjuntivo/especializado"
+                  href="/especializado"
                   title="Especializado"
                 />
       </div>
