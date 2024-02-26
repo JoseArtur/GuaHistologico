@@ -12,7 +12,7 @@ const ComponentsPage: React.FC = () => {
   <div className="min-h-28 ">
     <div className="max-w-screen-xl mx-auto py-4">
       <h2 className="font-bold text-center text-6xl  text-slate-700 font-display">
-        Tecidos Especializado
+        Tecidos Cartilaginoso
       </h2>
 {/*       <p className="text-center mt-4 font-medium text-slate-500">OUR NEWS FEED</p>
  */}      <div className="flex gap-6 mt-20 m-2">
@@ -20,21 +20,16 @@ const ComponentsPage: React.FC = () => {
 <Card
                   src="https://static.biologianet.com/2020/02/tecido-conjuntivo-denso.jpg"
                   alt=""
-                  href="/tecidos/conjuntivo/especializado/osseo"
-                  title="Ósseo"
+                  href="/posts/hialino"
+                  title="Hialino"
                 />
                 <Card
                   src="https://s4.static.brasilescola.uol.com.br/be/2020/02/tecido-muscular.jpg"
                   alt=""
-                  href="/tecidos/conjuntivo/especializado/cartilaginoso"
-                  title="Cartilaginoso"
+                  href="/posts/elastico"
+                  title="Elástico"
                 />
-                         <Card
-                  src="https://s4.static.brasilescola.uol.com.br/be/2020/02/tecido-muscular.jpg"
-                  alt=""
-                  href="/posts/adiposo"  
-                  title="Adiposo"
-                />
+                  
       </div>
     </div>
   </div>

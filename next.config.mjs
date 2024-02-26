@@ -25,6 +25,18 @@ const nextConfig = {    images: {
             hostname: 'i.ibb.co',
             port: '',
           },
+          {
+            protocol: 'https',
+            hostname: 'www.unifal-mg.edu.br',
+            port: '',
+          },
+      
+
+          {
+            protocol : 'https',   
+            hostname: 'mol.icb.usp.br',
+            port: '',
+          }
  ],}, };
 
 export default nextConfig;

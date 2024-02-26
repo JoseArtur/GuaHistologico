@@ -1,8 +1,6 @@
-'use client';
-// pages/index.tsx
+
 import React from 'react';
 import Header from './components/Header';
-import { supabase } from "@/lib/supabase";
 import Post, { BgColor } from './components/Post';
 
 const HomePage: React.FC = () => {
@@ -14,7 +12,7 @@ const HomePage: React.FC = () => {
         imageUrl="/images/orgao_intestino_delgado_dummy.jpg" 
         description="" 
         title="Órgãos"
-        pageUrl="/"
+        pageUrl="/orgaos"
         reversed={false}
         bgColor={BgColor.LightBlue}
         

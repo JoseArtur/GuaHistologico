@@ -1,5 +1,6 @@
-'use client';
-// pages/index.tsx
+
+
+
 import React from 'react';
 import Header from "@/app/components/Header";
 import { supabase } from "@/lib/supabase";

@@ -1,7 +1,7 @@
 "use client";
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from "react";
-import DataType from "../../utils/DataType";
+import DataType from "../../../utils/DataType";
 import Header from "@/app/components/Header";
 import Carousel from "@itseasy21/react-elastic-carousel";
 import Image from "next/image";
@@ -11,7 +11,6 @@ export default function Page({ params }: { params: { p: string } }) {
   const [photoOpacities, setPhotoOpacities] = useState<Map<number, number[]>>(
     new Map()
   );
-  const [isMobile, setIsMobile] = useState(false);
 
   const handleAnimation = (
     animationClass: string,
@@ -66,29 +65,13 @@ export default function Page({ params }: { params: { p: string } }) {
     getNewView();
   }, []);
 
-  
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 640);
-    };
-
-    // Check mobile on mount and resize
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    // Cleanup event listener on unmount
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, []);
   return (
     <>
       <Header />
       <div className="post-page">
-      <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200">
-        Tecido {params.p}
-      </h1>        <Carousel className="carousel" isRTL={false}  showArrows={!isMobile} 
-        enableSwipe={isMobile}>
+      <h1 className="text-center text-5xl font-bold mb-20 border-gray-200">
+        {params.p}
+      </h1>        <Carousel className="carousel" isRTL={false} enableSwipe={false}>
           {data.map((post, index) => (
             <div key={index} className="carousel-item">
               <div className="button-container">
@@ -220,64 +203,7 @@ export default function Page({ params }: { params: { p: string } }) {
           width: 1000px;
           height: 1000px;
         }
-        @media (max-width: 768px) {
-          .button-container {
-           margin-top: 2em;
-          }
-          .toggle-switch {
-            flex-direction: row;
-            align-items: center; /* center the items vertically */
-            justify-content: flex-start; /* space the items evenly */
-            width: 100%;
-            height: auto;
-          }
-          
-          .toggle-name{
-            font-size: 0.7em;
-            margin-left: 4px;
-            text-wrap: pretty;
-          }
-          
-            .toggle-label {
-              width: 40px;
-              height: 20px;
-            }
-          
-            .carousel-item {
-              flex-direction: column-reverse;
-            }
-          
-            .post-page {
-              margin-top: 8.8125vh;
-              margin-left: 2.75vw;
-              margin-right: 2.75vw;
-              font-size: 1em;
-              margin-bottom: 12.8125vh;
-            }
-          
-            .relative {
-              margin-left: 1.8125vw;
-              width: 100%;
-              height: 20em;
-            }
-
-            .toggle-label:before {
-              position: absolute;
-              content: "";
-              height: 20px; /* adjust as needed */
-              width: 20px; /* adjust as needed */
-              left: 1px; /* adjust as needed */
-              bottom: 0px; /* adjust as needed */
-              background-color: white;
-              transition: .4s;
-              border-radius: 50%;
-              border: 1px solid #ccc;
-            }
-            
-            .toggle-input:checked + .toggle-label:before {
-              transform: translateX(20px); /* adjust as needed */
-            }
-        }
+  
       `}</style>
     </>
   );

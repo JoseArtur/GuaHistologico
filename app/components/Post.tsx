@@ -9,6 +9,23 @@ export enum BgColor {
     LightCoral = 'lightcoral',
     LightGray = 'lightgray',
     White = 'white',
+    LightRed = 'lightred',
+    LightPink = 'lightpink',
+    LightPurple = 'lightpurple',
+    LightOrange = 'lightorange',
+    LightBrown = 'lightbrown',
+    LightCyan = 'lightcyan',
+    LightMagenta = 'lightmagenta',
+    LightSalmon = 'lightsalmon',
+    LightSeaGreen = 'lightseagreen',
+    LightSkyBlue = 'lightskyblue',
+    LightSlateGray = 'lightslategray',
+    LightSteelBlue = 'lightsteelblue',
+    LightTeal = 'lightteal',
+    LightTurquoise = 'lightturquoise',
+    DarkBlue = 'darkblue',
+    DarkGreen = 'darkgreen',
+
 }
 
 interface PostProps {
@@ -22,16 +39,16 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed, bgColor }) => {
     return (
-        <a className={`photo-description ${reversed ? 'reversed' : ''}`} href={pageUrl} style={{ paddingBottom: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div className="layout" style={{ display: 'flex', width: '100%', height: 'auto', backgroundColor: 'lightgray', flexDirection: reversed ? 'row-reverse' : 'row' }}>
-                <div className="inner-layout" style={{ backgroundColor: bgColor, flex: 0.3, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '32px 48px' }}>
-                    <h3 className="title-large" style={{ fontSize: '4em', fontWeight: 'bold' }}>{title}</h3>
-                    <div className="description" style={{ marginTop: '10px' }}>
+        <a className={`photo-description ${reversed ? 'flex-row-reverse' : 'flex-row'} pb-2 flex flex-col items-center`} href={pageUrl}>
+            <div className={` flex  h-40 w-full xl:h-auto bg-gray-200 ${reversed ? 'flex-row-reverse' : 'flex-row'}`}>
+                <div className={`inner-layout bg-${bgColor} flex-grow-0 flex flex-col justify-between p-8`}>
+                    <h3 className="title-large text-4xl font-bold">{title}</h3>
+                    <div className="description mt-2">
                         <p>{description}</p>
                     </div>
                 </div>
-                <div className="image-layout" style={{ flex: 0.7, height: '500px', overflow: 'hidden' }}>
-                    <Image height={500} width={10000} src={imageUrl} alt={description} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div className="image-layout flex-grow h-40 xl:h-128 overflow-hidden">
+                    <Image height={500} width={10000} src={imageUrl} alt={description} className="w-full h-40 xl:h-full object-cover" />
                 </div>
             </div>
         </a>
