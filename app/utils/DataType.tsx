@@ -2,6 +2,8 @@ export default interface DataType {
     title: string;
     primary_image: string;
     secondary_images: string[];
+    secondary_images_names: string[];
+    tags: string[];
     // add other properties as needed
     //To test
     // <a href="https://ibb.co/FmBdTR0"><img src="https://i.ibb.co/xXMrTxf/Design-sem-nome-2.png" alt="Design-sem-nome-2" border="0"></a>
