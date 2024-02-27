@@ -15,13 +15,14 @@ export default function Header() {
   };
   const router = useRouter()
   return (
-   <><header  style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000}}>
+   <>
+   <header className="fixed top-0 w-full z-50 bg-purple p-3 xl:p-10 text-white">
       <nav >
     <button type="button" onClick={() => router.back()}>
   <FiArrowLeft  className="text-6xl pr-4"/> 
 </button>
-        <div className="logo"><Link href="/">
-      Guia Histológico
+<div className="text-sm xl:text-3xl font-bold"><Link href="/">
+        Guia Histológico
 
     </Link></div>
         <div className="spacer"></div>
@@ -34,8 +35,7 @@ export default function Header() {
         <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} /> {/* Pass toggleMenu function */}
       </nav>
        </header>
-          <div style={{paddingTop:'63px'}}></div>
-          </> 
+       <div className=""></div>            </> 
   );
 }
 // components/Menu.tsx

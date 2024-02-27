@@ -1,5 +1,6 @@
-'use client';
-// pages/index.tsx
+
+
+
 import React from 'react';
 import Header from "@/app/components/Header";
 import { supabase } from "@/lib/supabase";
@@ -8,7 +9,7 @@ import Post, { BgColor } from '@/app/components/Post';
 const TecidosPage: React.FC = () => {
   return (
     <>
-       <div className="tecidos-page">
+       <div className="tecidos-page pt-24">
       <Header/>
       <Post 
         imageUrl="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/tecido-epitelial-5c4ae01996371.jpg" 
