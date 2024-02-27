@@ -5,7 +5,7 @@ import Post, { BgColor } from "@/app/components/Post";
 const TecidosPage: React.FC = () => {
   return (
     <>
-      <div className="tecidos-page">
+      <div className="tecidos-page pt-24">
         <Header />
         <Post
           imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2020/08/Captura-de-Tela-2020-08-13-%C3%A0s-19.04.25.png"

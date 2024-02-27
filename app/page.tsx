@@ -6,7 +6,7 @@ import Post, { BgColor } from './components/Post';
 const HomePage: React.FC = () => {
   return (
     <>
-       <div className="home-page">
+       <div className="home-page pt-24">
       <Header/>
       <Post 
         imageUrl="/images/orgao_intestino_delgado_dummy.jpg" 

@@ -36,7 +36,13 @@ const nextConfig = {    images: {
             protocol : 'https',   
             hostname: 'mol.icb.usp.br',
             port: '',
-          }
+          },
+          {
+            protocol : 'https',
+            hostname: 'editora.pucrs.br',
+            port: '',
+          
+          },
  ],}, };
 
 export default nextConfig;

@@ -35,7 +35,7 @@ export default function Header() {
         <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} /> {/* Pass toggleMenu function */}
       </nav>
        </header>
-       <div className="pt-16"></div>            </> 
+       <div className=""></div>            </> 
   );
 }
 // components/Menu.tsx

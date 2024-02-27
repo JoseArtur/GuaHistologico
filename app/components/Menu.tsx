@@ -40,7 +40,7 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           <Link href="/">Home</Link>
           <Link href="/orgaos">Órgãos</Link>
           <Link href="/tecidos">Tecidos</Link>
-          <Link href="/estruturas">Estruturas e Células</Link>
+          <Link href="/">Estruturas e Células</Link>
         </div>
       </div>
       <style jsx>{`
@@ -72,6 +72,20 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           flex-direction: column;
           font-size: 1.5em;
           font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+          .menu {
+            width: 40%;
+            padding: 4px;
+            padding-top: 20px;
+            padding-left: 10px;
+
+          }
+          .menu-items {
+            font-size: 1em;
+            
+          }
         }
       `}</style>
     </>

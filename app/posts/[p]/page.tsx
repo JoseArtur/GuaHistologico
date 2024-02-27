@@ -5,6 +5,7 @@ import DataType from "../../utils/DataType";
 import Header from "@/app/components/Header";
 import Carousel from "@itseasy21/react-elastic-carousel";
 import Image from "next/image";
+import Footer from "@/app/components/Footer";
 
 export default function Page({ params }: { params: { p: string } }) {
   const [data, setData] = useState<DataType[]>([]);
@@ -84,7 +85,7 @@ export default function Page({ params }: { params: { p: string } }) {
   return (
     <>
       <Header />
-      <div className="post-page">
+      <div className="post-page mb-96">
       <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200">
         Tecido {params.p}
       </h1>        <Carousel className="carousel" isRTL={false}  showArrows={!isMobile} 
@@ -217,8 +218,8 @@ export default function Page({ params }: { params: { p: string } }) {
         .relative {
           position: relative;
           margin-left: 3.625vw;
-          width: 1000px;
-          height: 1000px;
+          width: 700px;
+          height: 700px;
         }
         @media (max-width: 768px) {
           .button-container {
