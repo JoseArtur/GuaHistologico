@@ -1,15 +1,15 @@
 
+'use client';
 import React from 'react';
 import Header from './components/Header';
 import Post, { BgColor } from './components/Post';
-
 const HomePage: React.FC = () => {
   return (
     <>
        <div className="home-page pt-24">
       <Header/>
       <Post 
-        imageUrl="/images/orgao_intestino_delgado_dummy.jpg" 
+        imageUrl="orgaos/C002-INTESTINO_DELGADO_HE_9.1x" 
         description="" 
         title="Órgãos"
         pageUrl="/orgaos"
@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
         
       />
       <Post 
-        imageUrl="/images/orgao_esofago_dummy.jpg" 
+        imageUrl="tecidos/tecido_conjuntivo_especializado_hematopoietico_nua_A001-Coracao-HE_26.8x.jpg" 
         description="" 
         title="Tecidos"
         pageUrl="/tecidos"
@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
         bgColor={BgColor.White}
       />
       <Post 
-        imageUrl="/images/tecido_conjuntivo_dummy.jpg" 
+        imageUrl="default.jpg" 
         description="" 
         title="Estruturas e Células"
         pageUrl="/"

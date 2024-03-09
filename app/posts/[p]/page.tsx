@@ -86,7 +86,7 @@ export default function Page({ params }: { params: { p: string } }) {
     <>
       <Header />
       <div className="post-page mb-96">
-      <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200">
+      <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200 pt-40">
         Tecido {params.p}
       </h1>        <Carousel className="carousel" isRTL={false}  showArrows={!isMobile} 
         enableSwipe={isMobile}>
@@ -218,8 +218,8 @@ export default function Page({ params }: { params: { p: string } }) {
         .relative {
           position: relative;
           margin-left: 3.625vw;
-          width: 700px;
-          height: 700px;
+          width: 600px;
+          height: 500px;
         }
         @media (max-width: 768px) {
           .button-container {

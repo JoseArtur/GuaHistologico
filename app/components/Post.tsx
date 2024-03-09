@@ -1,3 +1,4 @@
+'use client'
 // Post.tsx
 import React from 'react';
 import Image from 'next/image';
@@ -27,7 +28,14 @@ export enum BgColor {
     DarkGreen = 'bg-green-900',
 
 }
-
+interface ImageLoaderProps {
+    src: string;
+    width: number;
+    quality?: number;
+ }
+ const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
+   return `https://woafrzymxudngxbeudts.supabase.co/storage/v1/object/public/Images/${src}?w=${width}&q=${quality || 75}`
+ }
 interface PostProps {
     imageUrl: string;
     description: string;
@@ -48,7 +56,7 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                     </div>
                 </div>
                 <div className="image-layout flex-grow h-40 xl:h-128 overflow-hidden">
-                    <Image height={500} width={10000} src={imageUrl} alt={description} className="w-full h-40 xl:h-full object-cover" />
+                    <Image loader={imageLoader} height={500} width={10000} src={imageUrl} alt={description} className="w-full h-40 xl:h-full object-cover" />
                 </div>
             </div>
         </a>

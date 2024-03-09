@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Header from "@/app/components/Header";
 import Post, { BgColor } from "@/app/components/Post";
@@ -6,9 +8,8 @@ const TecidosPage: React.FC = () => {
   return (
     <>
       <div className="tecidos-page pt-24">
-        <Header />
         <Post
-          imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2020/08/Captura-de-Tela-2020-08-13-%C3%A0s-19.04.25.png"
+          imageUrl="default.jpg"
           description=""
           title="Rim"
           pageUrl="/posts/orgaos/rim"
@@ -16,7 +17,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightBlue}
         />
         <Post
-          imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2018/02/bronquio-4x.jpg"
+          imageUrl="default.jpg"
           description=""
           title="Pulmão"
           pageUrl="/posts/orgaos/pulmao"
@@ -24,7 +25,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.White}
         />
         <Post
-          imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2020/08/Captura-de-Tela-2020-08-13-%C3%A0s-19.04.25.png"
+          imageUrl="orgaos/coracao/A001-Coracao-HE_26.8x.jpg"
           description=""
           title="Coração"
           pageUrl="/posts/orgaos/coracao"
@@ -32,7 +33,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightYellow}
         />
         <Post
-          imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2018/02/bronquio-4x.jpg"
+          imageUrl="default.jpg"
           description=""
           title="Testículo"
           pageUrl="/posts/orgaos/testiculo"
@@ -40,7 +41,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightPink}
         />
         <Post
-          imageUrl="https://s4.static.brasilescola.uol.com.br/be/2020/02/tecido-muscular.jpg"
+          imageUrl="default.jpg"
           description=""
           title="Ovário"
           pageUrl="/posts/orgaos/ovario"
@@ -49,7 +50,7 @@ const TecidosPage: React.FC = () => {
         />
 
         <Post
-          imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2018/02/bronquio-4x.jpg"
+          imageUrl="default.jpg"
           description=""
           title="Cérebro"
           pageUrl="/posts/orgaos/cerebro"
@@ -57,40 +58,40 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightTeal}
         />
 
-<Post
-          imageUrl="https://s4.static.brasilescola.uol.com.br/be/2020/02/tecido-muscular.jpg"
+        <Post
+          imageUrl="default.jpg"
           description=""
           title="Esofago"
           pageUrl="/posts/orgaos/esofago"
           reversed={false}
           bgColor={BgColor.LightOrange}
         />
-            <Post
-          imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2018/02/bronquio-4x.jpg"
+        <Post
+          imageUrl="default.jpg"
           description=""
           title="Estômago"
           pageUrl="/posts/orgaos/estomago"
           reversed={true}
           bgColor={BgColor.LightSalmon}
         />
-            <Post
-          imageUrl="https://static.biologianet.com/2020/02/tecido-conjuntivo-denso.jpg"
+        <Post
+          imageUrl="default.jpg"
           description=""
           title="Traqueia"
           pageUrl="/posts/orgaos/traqueia"
           reversed={false}
           bgColor={BgColor.LightCyan}
         />
-            <Post
-          imageUrl="https://s4.static.brasilescola.uol.com.br/be/2020/02/tecido-muscular.jpg"
+        <Post
+          imageUrl="default.jpg"
           description=""
           title="Pele"
           pageUrl="/posts/orgaos/pele"
           reversed={true}
           bgColor={BgColor.LightSkyBlue}
         />
-            <Post
-          imageUrl="https://www.unifal-mg.edu.br/histologiainterativa/wp-content/uploads/sites/38/2018/02/bronquio-4x.jpg"
+        <Post
+          imageUrl="default.jpg"
           description=""
           title="Fígado"
           pageUrl="/posts/orgaos/figado"
