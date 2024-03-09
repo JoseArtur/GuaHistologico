@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
        <div className="home-page pt-24">
       <Header/>
       <Post 
-        imageUrl="orgaos/C002-INTESTINO_DELGADO_HE_9.1x" 
+        imageUrl="orgaos/intestino_delgado/C002-INTESTINO_DELGADO_HE_9.1x" 
         description="" 
         title="Órgãos"
         pageUrl="/orgaos"
@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
         
       />
       <Post 
-        imageUrl="tecidos/tecido_conjuntivo_especializado_hematopoietico_nua_A001-Coracao-HE_26.8x.jpg" 
+        imageUrl="tecidos/conjuntivo/tecido_conjuntivo_especializado_hematopoietico_nua_A001-Coracao-HE_26.8x.jpg" 
         description="" 
         title="Tecidos"
         pageUrl="/tecidos"
