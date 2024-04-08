@@ -27,7 +27,7 @@ const nextConfig = {    images: {
           },
           {
             protocol: 'https',
-            hostname: 'www.unifal-mg.edu.br',
+            hostname: 'woafrzymxudngxbeudts.supabase.co',
             port: '',
           },
       
