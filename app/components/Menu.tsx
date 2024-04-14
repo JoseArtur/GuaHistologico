@@ -1,5 +1,6 @@
 // components/Menu.tsx
 import Link from 'next/link';
+import React from 'react';
 import { useEffect, useRef } from 'react';
 
 interface MenuProps {
@@ -43,7 +44,7 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           <Link href="/">Estruturas e Células</Link>
         </div>
       </div>
-      <style jsx>{`
+      <style>{`
         .overlay {
           position: fixed;
           top: 0;
