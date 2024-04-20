@@ -16,11 +16,8 @@ export default function Header() {
   const router = useRouter()
   return (
    <>
-   <header className="fixed top-0 w-full z-50 bg-purple p-3 xl:p-10 text-white">
+   <header className="sticky top-0 w-full z-50 bg-purple p-16 text-white">
       <nav >
-    <button type="button" onClick={() => router.back()}>
-  <FiArrowLeft  className="text-6xl pr-4"/> 
-</button>
 <div className="text-sm xl:text-3xl font-bold"><Link href="/">
         Guia Histológico
 
@@ -35,7 +32,8 @@ export default function Header() {
         <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} /> {/* Pass toggleMenu function */}
       </nav>
        </header>
-       <div className=""></div>            </> 
+       <div className=""></div>       
+    </>
   );
 }
 // components/Menu.tsx
