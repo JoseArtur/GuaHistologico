@@ -47,7 +47,7 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reversed, bgColor }) => {
     return (
-        <a className={`photo-description ${reversed ? 'flex-row-reverse' : 'flex-row'} pb-2 flex flex-col items-center`} href={pageUrl}>
+        <a className={`photo-description ${reversed ? 'flex-row-reverse' : 'flex-row'} flex flex-col items-center`} href={pageUrl}>
             <div className={` flex  h-40 w-full xl:h-auto bg-gray-200 ${reversed ? 'flex-row-reverse' : 'flex-row'}`}>
                 <div className={`inner-layout ${bgColor} flex-grow-0 flex flex-col justify-between p-8`}>
                     <h3 className="pt-6 text-xs xl:text-6xl font-bold text-4xl font-bold">{title}</h3>
@@ -56,7 +56,7 @@ const Post: React.FC<PostProps> = ({ imageUrl, description, title, pageUrl, reve
                     </div>
                 </div>
                 <div className="image-layout flex-grow h-40 xl:h-128 overflow-hidden">
-                    <Image loader={imageLoader} height={500} width={10000} src={imageUrl} alt={description} className="w-full h-40 xl:h-full object-cover" />
+                    <Image loader={imageLoader} height={0} width={0} src={imageUrl} alt={description} className="w-full xl:h-full object-cover" />
                 </div>
             </div>
         </a>
