@@ -41,7 +41,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightPink}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="orgaos/ovario/_rg_o_Ov_rio_Epit_lio_Germinativo__simples__NUA.png"
           description=""
           title="Ovário"
           pageUrl="/posts/orgaos/ovario"
@@ -95,6 +95,14 @@ const TecidosPage: React.FC = () => {
           description=""
           title="Fígado"
           pageUrl="/posts/orgaos/figado"
+          reversed={false}
+          bgColor={BgColor.LightSeaGreen}
+        />
+        <Post
+          imageUrl="orgaos/intestino_delgado/Orgao_Intestino_Delgado_a_Mucosa_b_submucosa_c_Muscular1_d_muscular2_e_serosa_NUA_C002_-_Estrutura_geral__orgao_.png"
+          description=""
+          title="Intestino Delgado"
+          pageUrl="/posts/orgaos/intestino_delgado"
           reversed={false}
           bgColor={BgColor.LightSeaGreen}
         />

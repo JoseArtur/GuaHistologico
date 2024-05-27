@@ -87,7 +87,7 @@ export default function Page({ params }: { params: { p: string } }) {
       <Header />
       <div className="post-page mb-96">
       <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200 pt-40">
-        Tecido {params.p}
+        Tecido 
       </h1>        <Carousel className="carousel" isRTL={false}  showArrows={!isMobile} 
         enableSwipe={isMobile}>
           {data.map((post, index) => (

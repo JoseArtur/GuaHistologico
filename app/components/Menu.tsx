@@ -1,4 +1,3 @@
-// components/Menu.tsx
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
@@ -7,16 +6,11 @@ interface MenuProps {
   toggleMenu: () => void;
 }
 
-
 const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
-  // Create a reference to the menu div
   const menuRef = useRef(null);
 
-  // Add an event listener to the document when the component mounts
   useEffect(() => {
-    // This function will be called when a click event occurs in the document
     const handleClickOutside = (event: MouseEvent) => {
-      // If the click was outside the menu, close the menu
       if (menuRef.current && !(menuRef.current as HTMLElement).contains(event.target as Node)) {
         toggleMenu();
       }
@@ -26,7 +20,6 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
-    // Remove the event listener when the component unmounts
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -35,12 +28,12 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
   return (
     <>
       {menuVisible && <div className="overlay" onClick={toggleMenu}></div>}
-      <div ref={menuRef} className={`menu ${menuVisible ? 'visible' : ''}`} id="menu">
+      <div ref={menuRef} className={`menu ${menuVisible ? 'visible' : ''}`}>
         <div className="menu-items">
-          <Link href="/">Home</Link>
-          <Link href="/orgaos">Órgãos</Link>
-          <Link href="/tecidos">Tecidos</Link>
-          <Link href="/">Estruturas e Células</Link>
+          <Link href="/" onClick={toggleMenu}>Home</Link>
+          <Link href="/orgaos" onClick={toggleMenu}>Órgãos</Link>
+          <Link href="/tecidos" onClick={toggleMenu}>Tecidos</Link>
+          <Link href="/estruturas-celulas" onClick={toggleMenu}>Estruturas e Células</Link>
         </div>
       </div>
       <style jsx>{`
@@ -64,7 +57,7 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           padding: 40px;
           z-index: 1000;
         }
-        .visible {
+        .menu.visible {
           display: block;
         }
         .menu-items {
@@ -73,18 +66,49 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           font-size: 1.5em;
           font-weight: bold;
         }
+        .menu-items a {
+          color: white;
+          text-decoration: none;
+          margin-bottom: 20px;
+        }
+        .menu-items a:hover {
+          text-decoration: underline;
+        }
+        .hamburger {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 30px;
+          height: 24px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+        .hamburger span {
+          display: block;
+          width: 100%;
+          height: 4px;
+          background: white;
+          border-radius: 2px;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .hamburger.active span:nth-child(1) {
+          transform: translateY(10px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+          transform: translateY(-10px) rotate(-45deg);
+        }
 
         @media (max-width: 768px) {
           .menu {
             width: 40%;
-            padding: 4px;
-            padding-top: 20px;
-            padding-left: 10px;
-
+            padding: 20px;
           }
           .menu-items {
             font-size: 1em;
-            
           }
         }
       `}</style>

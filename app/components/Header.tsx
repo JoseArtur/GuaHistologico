@@ -1,41 +1,112 @@
-// components/Header.tsx
-'use client'
-import Link from 'next/link';
-import { useState } from 'react';
-import Menu from './Menu';
-import { FiSearch,FiArrowLeft } from 'react-icons/fi';
-import '@/styles/globals.css'
-import { useRouter } from 'next/navigation'
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+import Menu from "./Menu";
+import { FiSearch, FiArrowLeft } from "react-icons/fi";
+import { useRouter } from "next/navigation";
+import "@/styles/globals.css";
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const posts = [
+    { title: "Nervo", url: "/posts/nervo", image: "default.jpg" },
+    {
+      title: "Tecido Epitelial",
+      url: "/tecidos/epitelial",
+      image: "default.jpg",
+    },
+    {
+      title: "Tecido Conjuntivo",
+      url: "/tecidos/conjuntivo",
+      image:
+        "tecidos/conjuntivo/tecido_conjuntivo_especializado_hematopoietico_nua_A001-Coracao-HE_26.8x.jpg",
+    },
+    {
+      title: "Tecido Muscular",
+      url: "/tecidos/muscular",
+      image: "default.jpg",
+    },
+    { title: "Tecido Nervoso", url: "/tecidos/nervoso", image: "default.jpg" },
+    // Adicione outros posts aqui
+  ];
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
-  const router = useRouter()
-  return (
-   <>
-   <header className="fixed top-0 w-full z-50 bg-purple p-3 xl:p-10 text-white">
-      <nav >
-    <button type="button" onClick={() => router.back()}>
-  <FiArrowLeft  className="text-6xl pr-4"/> 
-</button>
-<div className="text-sm xl:text-3xl font-bold"><Link href="/">
-        Guia Histológico
 
-    </Link></div>
-        <div className="spacer"></div>
-      <FiSearch size={30} style={{ marginRight  : '30px' }}/> 
-        <button onClick={toggleMenu} className={`hamburger ${menuVisible ? 'active' : ''}`}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} /> {/* Pass toggleMenu function */}
-      </nav>
-       </header>
-       <div className=""></div>            </> 
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const term = event.target.value;
+    setSearchTerm(term);
+    if (term) {
+      const results = posts.filter((post) =>
+        post.title.toLowerCase().includes(term.toLowerCase())
+      );
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
+  };
+
+  const router = useRouter();
+
+  return (
+    <>
+      <header className="fixed top-0 w-full z-50 bg-purple p-3 xl:p-10 text-white flex items-center justify-between">
+        <div className="flex items-center">
+          <button type="button" onClick={() => router.back()} className="mr-4">
+            <FiArrowLeft className="text-3xl xl:text-6xl" />
+          </button>
+          <div className="text-sm xl:text-3xl font-bold">
+            <Link href="/">Guia Histológico</Link>
+          </div>
+        </div>
+        <div className="flex items-center relative">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            placeholder="Search..."
+            className="p-2 rounded bg-white text-black mr-2"
+          />
+          <FiSearch size={30} className="mr-6" />
+          <button
+            onClick={toggleMenu}
+            className={`hamburger ${menuVisible ? "active" : ""}`}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          {searchTerm && (
+            <div className="absolute top-12 left-0 bg-white text-black w-full rounded shadow-lg max-h-96 overflow-y-auto">
+              {searchResults.length > 0 ? (
+                searchResults.map((result, index) => (
+                  <Link key={index} href={result.url} legacyBehavior>
+                    <a
+                      onClick={() => setSearchTerm("")}
+                      className="flex items-center p-2 border-b hover:bg-gray-100"
+                    >
+                      <img
+                        src={`https://woafrzymxudngxbeudts.supabase.co/storage/v1/object/public/Images/${result.image}`}
+                        alt={result.title}
+                        className="w-12 h-12 object-cover mr-2 rounded"
+                      />
+                      <span>{result.title}</span>
+                    </a>
+                  </Link>
+                ))
+              ) : (
+                <div className="p-2">No results found</div>
+              )}
+            </div>
+          )}
+        </div>
+      </header>
+      <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} />
+      <div className="pt-24"></div> {/* Spacer to push down the content */}
+    </>
   );
 }
-// components/Menu.tsx
