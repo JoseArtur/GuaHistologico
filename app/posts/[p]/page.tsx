@@ -3,7 +3,6 @@
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from "react";
 import DataType from "../../utils/DataType";
-import Header from "@/app/components/Header";
 import Carousel from "@itseasy21/react-elastic-carousel";
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
@@ -80,7 +79,6 @@ export default function Page({ params }: { params: { p: string } }) {
 
   return (
     <>
-      <Header />
       <div className="post-page mb-96">
         <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200 pt-40">
           Tecido {title}
