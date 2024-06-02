@@ -25,7 +25,7 @@ const ConjuntivoPage: React.FC = () => {
                   title="Propriamente Dito"
                 />
                 <Card
-                  src="default.jpg"
+                  src="conjuntivo/tecido_conjuntivo_especializado_hematopoietico_nua_A001-Coracao-HE_26.8x.jpg"
                   alt=""
                   href="/tecidos/conjuntivo/especializado"
                   title="Especializado"
