@@ -7,7 +7,7 @@ import Post, { BgColor } from "@/app/components/Post";
 const TecidosPage: React.FC = () => {
   return (
     <>
-      <div className="tecidos-page pt-24">
+      <div className="tecidos-page">
         <Post
           imageUrl="default.jpg"
           description=""

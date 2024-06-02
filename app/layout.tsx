@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html >
+    <html>
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
