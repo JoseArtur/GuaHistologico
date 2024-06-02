@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 interface MenuProps {
   menuVisible: boolean;
@@ -11,29 +11,40 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !(menuRef.current as HTMLElement).contains(event.target as Node)) {
+      if (
+        menuRef.current &&
+        !(menuRef.current as HTMLElement).contains(event.target as Node)
+      ) {
         toggleMenu();
       }
     };
 
     if (menuVisible) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [toggleMenu, menuVisible]);
 
   return (
     <>
       {menuVisible && <div className="overlay" onClick={toggleMenu}></div>}
-      <div ref={menuRef} className={`menu ${menuVisible ? 'visible' : ''}`}>
+      <div ref={menuRef} className={`menu ${menuVisible ? "visible" : ""}`}>
         <div className="menu-items">
-          <Link href="/" onClick={toggleMenu}>Home</Link>
-          <Link href="/orgaos" onClick={toggleMenu}>Órgãos</Link>
-          <Link href="/tecidos" onClick={toggleMenu}>Tecidos</Link>
-          <Link href="/estruturas-celulas" onClick={toggleMenu}>Estruturas e Células</Link>
+          <Link href="/" onClick={toggleMenu}>
+            Home
+          </Link>
+          <Link href="/orgaos" onClick={toggleMenu}>
+            Órgãos
+          </Link>
+          <Link href="/tecidos" onClick={toggleMenu}>
+            Tecidos
+          </Link>
+          <Link href="/estruturas-celulas" onClick={toggleMenu}>
+            Estruturas e Células
+          </Link>
         </div>
       </div>
       <style jsx>{`

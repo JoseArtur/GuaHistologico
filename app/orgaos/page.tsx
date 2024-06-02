@@ -61,7 +61,7 @@ const TecidosPage: React.FC = () => {
         <Post
           imageUrl="default.jpg"
           description=""
-          title="Esofago"
+          title="Esôfago"
           pageUrl="/posts/orgaos/esofago"
           reversed={false}
           bgColor={BgColor.LightOrange}
