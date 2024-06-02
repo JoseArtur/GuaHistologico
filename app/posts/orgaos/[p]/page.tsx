@@ -2,16 +2,16 @@
 
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from "react";
-import DataType from "../../utils/DataType";
-import Header from "@/app/components/Header";
+import DataType from "../../../utils/DataType";
 import Carousel from "@itseasy21/react-elastic-carousel";
 import Image from "next/image";
-import Footer from "@/app/components/Footer";
 import titles from "@/app/utils/titles.json";
+import { TitlesType } from "@/app/utils/TitlesType";
 
 export default function Page({ params }: { params: { p: string } }) {
-  const title = titles[params.p] || params.p;
+  const pathTranslations: TitlesType = titles as TitlesType;
 
+  const title = pathTranslations[params.p] || params.p;
   const [data, setData] = useState<DataType[]>([]);
   const [photoOpacities, setPhotoOpacities] = useState<Map<number, number[]>>(
     new Map()
