@@ -7,11 +7,14 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import "@/styles/globals.css";
 import titles from "@/app/utils/titles.json";
+import { TitlesType } from "@/app/utils/TitlesType"; // Certifique-se de que o caminho está correto
 
 export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<
+    { title: string; url: string; image: string }[]
+  >([]);
 
   const posts = [
     { title: "Nervo", url: "/posts/nervo", image: "default.jpg" },
@@ -59,17 +62,12 @@ export default function Header() {
     const pathArray = pathname.split("/").filter((path) => path);
     const breadcrumbs = [{ name: "Início", url: "/" }]; // Add Home to breadcrumbs
 
-    const pathTranslations: { [key: string]: string } = {
-      orgaos: "Órgãos",
-      tecidos: "Tecidos",
-      "propriamente-dito": "Propriamente Dito",
-
-      // Adicione outras traduções aqui
-    };
+    const pathTranslations: TitlesType = titles as TitlesType;
 
     pathArray.forEach((path, index) => {
       const url = `/${pathArray.slice(0, index + 1).join("/")}`;
-      const name = titles[path] || path.charAt(0).toUpperCase() + path.slice(1);
+      const name =
+        pathTranslations[path] || path.charAt(0).toUpperCase() + path.slice(1);
       breadcrumbs.push({ name, url });
     });
 
