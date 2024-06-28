@@ -54,7 +54,7 @@ export default function Page({ params }: { params: { p: string } }) {
       for (let i = 0; i < data.length; i++) {
         initialOpacities.set(
           i,
-          new Array(data[i].secondary_images.length).fill(0)
+          new Array(data[i].secondary_images?.length).fill(0)
         );
       }
       setPhotoOpacities(initialOpacities); // initialize opacity map with 0s
@@ -113,18 +113,20 @@ export default function Page({ params }: { params: { p: string } }) {
                   </div>
                 ))}
               </div>
-              <div className={`relative`}>
+              <div className={`relative w-full h-auto sm:w-full sm:h-auto`}>
                 <Image
-                  className="photo-1"
-                  fill={true}
+                  className="photo-1 object-cover object-center"
+                  layout="fill"
                   src={post.primary_image}
                   alt={post.title}
                 />
                 {post.secondary_images?.map((image, i) => (
                   <Image
                     key={i}
-                    className={`photo${index}-${i + 1}`}
-                    fill={true}
+                    className={`photo${index}-${
+                      i + 1
+                    } object-cover object-center`}
+                    layout="fill"
                     style={{
                       opacity: (photoOpacities.get(index) || [0])[i] || 0,
                     }}
@@ -214,7 +216,13 @@ export default function Page({ params }: { params: { p: string } }) {
           height: 500px;
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 640px) {
+          .relative {
+            width: 1000px;
+            height: 600px;
+          }
+        }
+        @media (max-width: 2000px) {
           .button-container {
             margin-top: 2em;
           }
@@ -252,7 +260,7 @@ export default function Page({ params }: { params: { p: string } }) {
 
           .relative {
             margin-left: 1.8125vw;
-            width: 100%;
+            width: 39em;
             height: 20em;
           }
 

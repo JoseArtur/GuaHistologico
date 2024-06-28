@@ -9,6 +9,8 @@ const TecidosPage: React.FC = () => {
   return (
     <>
       <div className="tecidos-page#">
+        <Header />
+
         <Post
           imageUrl="default.jpg"
           description=""

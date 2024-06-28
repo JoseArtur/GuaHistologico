@@ -8,6 +8,8 @@ const TecidosPage: React.FC = () => {
   return (
     <>
       <div className="tecidos-page">
+        <Header />
+
         <Post
           imageUrl="default.jpg"
           description=""
@@ -103,8 +105,8 @@ const TecidosPage: React.FC = () => {
           description=""
           title="Intestino Delgado"
           pageUrl="/posts/orgaos/intestino_delgado"
-          reversed={false}
-          bgColor={BgColor.LightSeaGreen}
+          reversed={true}
+          bgColor={BgColor.LightSlateGray}
         />
         {/* Other components and elements */}
       </div>
