@@ -68,7 +68,7 @@ export default function Header() {
             <button type="button" onClick={() => router.back()} className="mr-4">
               <FiArrowLeft className="text-xl xl:text-3xl" />
             </button>
-            <div className="text-sm xl:text-3xl font-bold">
+            <div className="text-sm sm:text-2xl xl:text-3xl font-bold">
               <Link href="/">Guia Histológico</Link>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function Header() {
               value={searchTerm}
               onChange={handleSearchChange}
               placeholder="Search..."
-              className="p-1 text-sm rounded bg-white text-black mr-2 xl:p-2 xl:text-base"
+              className="p-1 text-sm sm:text-2xl rounded bg-white text-black mr-2 xl:p-2 xl:text-base"
             />
             <FiSearch size={20} className="mr-6" />
             <button onClick={toggleMenu} className={`hamburger ${menuVisible ? 'active' : ''}`}>
@@ -105,7 +105,7 @@ export default function Header() {
         
         {!pathname.startsWith('/posts') && (
           <nav className="mt-2">
-            <ol className="list-reset flex text-white flex-wrap">
+            <ol className="list-reset flex text-white flex-wrap sm:text-2xl">
               {breadcrumbs.map((breadcrumb, index) => (
                 <li key={index} className="flex items-center">
                   <Link href={breadcrumb.url} className="text-white hover:text-gray-300">

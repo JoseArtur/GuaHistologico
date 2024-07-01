@@ -19,7 +19,7 @@ const ConjuntivoPage: React.FC = () => {
                */}{" "}
               <div className="flex gap-6 mt-20 m-2">
                 <Card
-                  src="default.jpg"
+                  src="tecidos/conjuntivo/propriamente_dito/tecido_conjuntivo_propriamente_dito_denso_n_o_modelado_NUA.png"
                   alt=""
                   href="/tecidos/conjuntivo/propriamente-dito"
                   title="Propriamente Dito"

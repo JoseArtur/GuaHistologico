@@ -12,7 +12,7 @@ const TecidosPage: React.FC = () => {
         <Header />
 
         <Post
-          imageUrl="default.jpg"
+          imageUrl="tecidos/epitelial/Tecido_Epitelial_Gl_ndula_End_crina_Cordonal_Ilhota_Langerhans_NUA.png"
           description=""
           title="Tecido Epitelial"
           pageUrl="/tecidos/epitelial"
@@ -28,7 +28,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.White}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="tecidos/muscular/tecido_muscular_liso_N_cleos_de_Algumas_C_lulas_NUA.png?t=2024-07-01T20%3A07%3A13.916Z"
           description=""
           title="Tecido Muscular"
           pageUrl="/tecidos/muscular"

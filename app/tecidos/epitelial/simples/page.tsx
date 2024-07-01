@@ -17,7 +17,7 @@ const EpitelialPage: React.FC = () => {
                */}{" "}
               <div className="flex gap-6 mt-20 m-2">
                 <Card
-                  src="default.jpg"
+                  src="tecidos/epitelial/simples/cuboide/Tecido_Epitelial_Simples_Cuboide__NUA.png?t=2024-07-01T19%3A31%3A30.929Z"
                   alt=""
                   href="/posts/cuboide"
                   title="Cuboide"
@@ -35,9 +35,9 @@ const EpitelialPage: React.FC = () => {
                   title="Pavimentoso"
                 />
                 <Card
-                  src="default.jpg"
+                  src="tecidos/epitelial/simples/pseudo-estratificado/tecido_epitelial_simples_pseudoestratificado_NUA.png?t=2024-07-01T19%3A37%3A20.615Z"
                   alt=""
-                  href="/posts/pseudoestratificado"
+                  href="/posts/pseudo-estratificado"
                   title="Pseudo estratificado"
                 />
               </div>

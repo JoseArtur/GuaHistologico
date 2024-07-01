@@ -11,22 +11,6 @@ const TecidosPage: React.FC = () => {
         <Header />
 
         <Post
-          imageUrl="default.jpg"
-          description=""
-          title="Rim"
-          pageUrl="/posts/orgaos/rim"
-          reversed={false}
-          bgColor={BgColor.LightBlue}
-        />
-        <Post
-          imageUrl="default.jpg"
-          description=""
-          title="Pulmão"
-          pageUrl="/posts/orgaos/pulmao"
-          reversed={true}
-          bgColor={BgColor.White}
-        />
-        <Post
           imageUrl="orgaos/coracao/A001-Coracao-HE_26.8x.jpg"
           description=""
           title="Coração"
@@ -35,7 +19,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightYellow}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="orgaos/testiculo/org_o_testiculo_zoom_em_C_lulas_de_Leydig_NUA.png?t=2024-07-01T19%3A19%3A54.317Z"
           description=""
           title="Testículo"
           pageUrl="/posts/orgaos/testiculo"
@@ -52,7 +36,7 @@ const TecidosPage: React.FC = () => {
         />
 
         <Post
-          imageUrl="default.jpg"
+          imageUrl="orgaos/cerebro/org_o_Cerebro_ZOOM_C_lulas_Ependimais__NUA.png"
           description=""
           title="Cérebro"
           pageUrl="/posts/orgaos/cerebro"
@@ -61,7 +45,7 @@ const TecidosPage: React.FC = () => {
         />
 
         <Post
-          imageUrl="default.jpg"
+          imageUrl="orgaos/esofago/Orgao_Es_fago_NUA.jpg"
           description=""
           title="Esôfago"
           pageUrl="/posts/orgaos/esofago"
@@ -69,15 +53,15 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightOrange}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="orgaos/intestino_delgado/Orgao_Intestino_Delgado_a_Mucosa_b_submucosa_c_Muscular1_d_muscular2_e_serosa_NUA_C002_-_Estrutura_geral__orgao_.png"
           description=""
-          title="Estômago"
-          pageUrl="/posts/orgaos/estomago"
+          title="Intestino Delgado"
+          pageUrl="/posts/orgaos/intestino_delgado"
           reversed={true}
-          bgColor={BgColor.LightSalmon}
+          bgColor={BgColor.LightSlateGray}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="orgaos/traqueia/orgao_traqueia_NUA.png"
           description=""
           title="Traqueia"
           pageUrl="/posts/orgaos/traqueia"
@@ -85,7 +69,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightCyan}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="orgaos/pele/orgao_pele_NUA.png?t=2024-07-01T19%3A17%3A52.183Z"
           description=""
           title="Pele"
           pageUrl="/posts/orgaos/pele"
@@ -100,13 +84,30 @@ const TecidosPage: React.FC = () => {
           reversed={false}
           bgColor={BgColor.LightSeaGreen}
         />
+
         <Post
-          imageUrl="orgaos/intestino_delgado/Orgao_Intestino_Delgado_a_Mucosa_b_submucosa_c_Muscular1_d_muscular2_e_serosa_NUA_C002_-_Estrutura_geral__orgao_.png"
+          imageUrl="default.jpg"
           description=""
-          title="Intestino Delgado"
-          pageUrl="/posts/orgaos/intestino_delgado"
+          title="Rim"
+          pageUrl="/posts/orgaos/rim"
           reversed={true}
-          bgColor={BgColor.LightSlateGray}
+          bgColor={BgColor.LightBlue}
+        />
+        <Post
+          imageUrl="default.jpg"
+          description=""
+          title="Pulmão"
+          pageUrl="/posts/orgaos/pulmao"
+          reversed={false}
+          bgColor={BgColor.White}
+        />
+        <Post
+          imageUrl="default.jpg"
+          description=""
+          title="Estômago"
+          pageUrl="/posts/orgaos/estomago"
+          reversed={true}
+          bgColor={BgColor.LightSalmon}
         />
         {/* Other components and elements */}
       </div>

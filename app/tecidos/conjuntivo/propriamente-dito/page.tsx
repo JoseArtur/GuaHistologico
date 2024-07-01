@@ -17,7 +17,7 @@ const PropriamenteDitoPage: React.FC = () => {
                */}{" "}
               <div className="flex gap-6 mt-20 m-2">
                 <Card
-                  src="default.jpg"
+                  src="tecidos/conjuntivo/propriamente_dito/tecido_conjuntivo_propriamente_dito_denso_modelado_tend_o_NUA.png?t=2024-07-01T19%3A46%3A20.641Z"
                   alt=""
                   href="/tecidos/conjuntivo/propriamente-dito/denso"
                   title="Denso"

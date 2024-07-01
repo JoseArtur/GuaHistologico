@@ -18,7 +18,7 @@ const ComponentsPage: React.FC = () => {
                */}{" "}
               <div className="flex gap-6 mt-20 m-2">
                 <Card
-                  src="default.jpg"
+                  src="tecidos/conjuntivo/especializado/cartilaginoso/tecido_conjuntivo_especializado_Cartilagem_Hialina_NUA.png?t=2024-07-01T19%3A55%3A29.277Z"
                   alt=""
                   href="/posts/hialino"
                   title="Hialino"

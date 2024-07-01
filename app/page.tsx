@@ -24,12 +24,20 @@ const HomePage: React.FC = () => {
           bgColor={BgColor.White}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="estruturas/foliculo_ovariano/Estrutura_Fol_culo_Ovariano_NUA.png?t=2024-07-01T20%3A48%3A42.511Z"
           description=""
-          title="Estruturas e Células"
-          pageUrl="/"
+          title="Estruturas"
+          pageUrl="/estruturas"
           reversed={false}
           bgColor={BgColor.LightYellow}
+        />
+        <Post
+          imageUrl="celulas/leydig/c_lulas_C_lulas_de_Leydig__c_lulas_intersticiais__NUA.png"
+          description=""
+          title="Células"
+          pageUrl="/celulas"
+          reversed={true}
+          bgColor={BgColor.LightBlue}
         />
         {/* Other components and elements */}
       </div>

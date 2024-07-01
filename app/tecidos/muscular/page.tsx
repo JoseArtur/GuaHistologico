@@ -17,13 +17,13 @@ const EpitelialPage: React.FC = () => {
                */}{" "}
               <div className="flex gap-6 mt-20 m-2">
                 <Card
-                  src="default.jpg"
+                  src="tecidos/muscular/esqueletico/tecido_muscular_estriado_esqueletico_NUA.png?t=2024-07-01T20%3A05%3A13.265Z"
                   alt=""
                   href="/tecidos/muscular/estriado"
                   title="Estriado"
                 />
                 <Card
-                  src="default.jpg"
+                  src="tecidos/muscular/tecido_muscular_liso_N_cleos_de_Algumas_C_lulas_NUA.png?t=2024-07-01T20%3A07%3A13.916Z"
                   alt=""
                   href="/posts/naoestriado"
                   title="Não Estriado"

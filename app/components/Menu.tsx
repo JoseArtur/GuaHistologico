@@ -42,8 +42,11 @@ const Menu: React.FC<MenuProps> = ({ menuVisible, toggleMenu }) => {
           <Link href="/tecidos" onClick={toggleMenu}>
             Tecidos
           </Link>
-          <Link href="/estruturas-celulas" onClick={toggleMenu}>
-            Estruturas e Células
+          <Link href="/estruturas" onClick={toggleMenu}>
+            Estruturas
+          </Link>
+          <Link href="/celulas" onClick={toggleMenu}>
+            Células
           </Link>
         </div>
       </div>

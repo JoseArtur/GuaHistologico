@@ -61,7 +61,7 @@ const Post: React.FC<PostProps> = ({
     <a
       className={`photo-description ${
         reversed ? "flex-row-reverse" : "flex-row"
-      } flex flex-col sm:flex-row items-center `}
+      } flex flex-col sm:flex-row items-center justify-center mx-auto`}
       href={pageUrl}
     >
       <div
@@ -72,16 +72,14 @@ const Post: React.FC<PostProps> = ({
         <div
           className={`inner-layout  ${bgColor} flex-grow-0 flex flex-col justify-between p-4 sm:p-8`}
         >
-          <h3 className="pt-6 text-xs sm:text-lg xl:text-6xl font-bold">
+          <h3 className="pt-6 text-s sm:text-4xl xl:text-7xl font-bold">
             {title}
           </h3>
           <div className="description mt-2 text-xs sm:text-sm xl:text-base">
             <p>{description}</p>
           </div>
         </div>
-        <div
-          className="image-layout flex-grow relative overflow-hidden"
-        >
+        <div className="image-layout flex-grow relative overflow-hidden">
           <Image
             loader={imageLoader}
             layout="fill"
@@ -99,8 +97,12 @@ const Post: React.FC<PostProps> = ({
 
         @media (min-width: 768px) {
           .image-layout {
-            height: 400px;
+            
+          height: 400px;
           }
+          .flex {
+            max-width: 2000px; /* Define a maximum width for the image */
+            }
         }
       `}</style>
     </a>

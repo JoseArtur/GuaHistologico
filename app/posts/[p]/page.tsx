@@ -82,7 +82,7 @@ export default function Page({ params }: { params: { p: string } }) {
     <>
       <div className="post-page mb-96">
         <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gra  y-200 pt-40">
-          Tecido {title}
+           {title}
         </h1>
         <Carousel
           className="carousel"
