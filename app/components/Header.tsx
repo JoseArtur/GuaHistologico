@@ -78,7 +78,7 @@ export default function Header() {
               value={searchTerm}
               onChange={handleSearchChange}
               placeholder="Search..."
-              className="p-1 text-sm sm:text-2xl rounded bg-white text-black mr-2 xl:p-2 xl:text-base"
+              className="p-1 text-sm sm:text-2xl rounded bg-white text-black mr-2 ml-4 xl:p-2 xl:text-base"
             />
             <FiSearch size={20} className="mr-6" />
             <button onClick={toggleMenu} className={`hamburger ${menuVisible ? 'active' : ''}`}>
