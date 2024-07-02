@@ -12,7 +12,7 @@ const ComponentsPage: React.FC = () => {
           <div className="min-h-28 ">
             <div className="max-w-screen-xl mx-auto py-4">
               <h2 className="font-bold text-center text-6xl  text-slate-700 font-display pt-10">
-                Tecidos Ósseos
+                Tecido Conjuntivo Especializado Ósseo
               </h2>
               {/*       <p className="text-center mt-4 font-medium text-slate-500">OUR NEWS FEED</p>
                */}{" "}
