@@ -36,10 +36,11 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightYellow}
         />
         <Post
-          imageUrl="default.jpg"
+          imageUrl="tecidos/nervoso/Tecido_Nervoso_Cerebelo_subst_ncia_cinzenta_Camadas_NUA.png"
           description=""
           title="Tecido Nervoso"
-          pageUrl="/tecidos/nervoso"
+          pageUrl="/posts/nervoso"
+          // pageUrl="/tecidos/nervoso"
           reversed={true}
           bgColor={BgColor.LightCoral}
         />

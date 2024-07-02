@@ -81,8 +81,8 @@ export default function Page({ params }: { params: { p: string } }) {
   return (
     <>
       <div className="post-page mb-96">
-        <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gra  y-200 pt-40">
-           {title}
+        <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200 pt-40">
+          {title}
         </h1>
         <Carousel
           className="carousel"
@@ -212,7 +212,7 @@ export default function Page({ params }: { params: { p: string } }) {
         .relative {
           position: relative;
           margin-left: 3.625vw;
-          width: 600px;
+          width: 1000px;
           height: 500px;
         }
 
@@ -222,7 +222,30 @@ export default function Page({ params }: { params: { p: string } }) {
             height: 600px;
           }
         }
+        @media (min-width: 4050px) {
+          .toggle-name {
+            font-size: 1.5em;
+            margin-left: 4px;
+            text-wrap: pretty;
+          }
+          .relative {
+            width: 1800px;
+            height: 900px;
+          }
+        }
+        @media (min-width: 5050px) {
+          .relative {
+            width: 2000px;
+            height: 1000px;
+          }
+          .toggle-name {
+            font-size: 1.7em;
+            margin-left: 4px;
+            text-wrap: pretty;
+          }
+        }
         @media (max-width: 2000px) {
+        
           .button-container {
             margin-top: 2em;
           }
@@ -251,7 +274,7 @@ export default function Page({ params }: { params: { p: string } }) {
           }
 
           .post-page {
-            margin-top: 8.8125vh;
+            margin-top: 2.8125vh;
             margin-left: 2.75vw;
             margin-right: 2.75vw;
             font-size: 1em;
@@ -260,8 +283,8 @@ export default function Page({ params }: { params: { p: string } }) {
 
           .relative {
             margin-left: 1.8125vw;
-            width: 39em;
-            height: 20em;
+            width: 24em;
+            height: 12em;
           }
 
           .toggle-label:before {

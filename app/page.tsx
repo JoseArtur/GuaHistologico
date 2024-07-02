@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
       <div className="home-page ">
         <Header />
         <Post
-          imageUrl="orgaos/intestino_delgado/C002-INTESTINO_DELGADO_HE_9.1x"
+          imageUrl="orgaos/esofago/Orgao_Es_fago_NUA.jpg"
           description=""
           title="Órgãos"
           pageUrl="/orgaos"
@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
           bgColor={BgColor.LightBlue}
         />
         <Post
-          imageUrl="tecidos/conjuntivo/tecido_conjuntivo_especializado_hematopoietico_nua_A001-Coracao-HE_26.8x.jpg"
+          imageUrl="tecidos/muscular/esqueletico/tecido_muscular_estriado_esqueletico_NUA.png?t=2024-07-02T22%3A49%3A26.177Z"
           description=""
           title="Tecidos"
           pageUrl="/tecidos"
@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
           bgColor={BgColor.White}
         />
         <Post
-          imageUrl="estruturas/foliculo_ovariano/Estrutura_Fol_culo_Ovariano_NUA.png?t=2024-07-01T20%3A48%3A42.511Z"
+          imageUrl="estruturas/cilios/estrutura_c_lios_NUA.png?t=2024-07-02T22%3A14%3A03.095Z"
           description=""
           title="Estruturas"
           pageUrl="/estruturas"
@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
           bgColor={BgColor.LightYellow}
         />
         <Post
-          imageUrl="celulas/leydig/c_lulas_C_lulas_de_Leydig__c_lulas_intersticiais__NUA.png"
+          imageUrl="celulas/neuronio/celula_Neur_nio_de_Purkinje_cerebro_NUA.png"
           description=""
           title="Células"
           pageUrl="/celulas"

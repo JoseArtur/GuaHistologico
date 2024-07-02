@@ -47,7 +47,7 @@ const TecidosPage: React.FC = () => {
         <Post
           imageUrl="estruturas/complexo_nervoso/Estrutura_plexo_nervoso_NUA_C003_-_Plexos_nervosos__orgao_ou_estrutura_.png"
           description=""
-          title="Complexo Nervoso"
+          title="Plexo Nervoso"
           pageUrl="/posts/complexo_nervoso"
           reversed={false}
           bgColor={BgColor.LightOrange}
