@@ -30,7 +30,7 @@ export type TitlesType = {
   pavimentoso: string;
   cubico: string;
   cilindrico: string;
-  cubicoide: string;
+  cuboide: string;
   colunar: string;
   "pseudo-estratificado": string;
   naoestriado: string;
