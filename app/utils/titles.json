@@ -28,7 +28,6 @@
   "pavimentoso": "Tecido Epitelial Estratificado Pavimentoso",
   "cubico": "Tecido Epitelial Estratificado Cúbico",
   "cilindrico": "Tecido Epitelial Estratificado Cilíndrico",
-  "cuboide":"Tecido Cubóide",
   "colunar": "Tecido Epitelial Simples Colunar",
   "pseudo-estratificado": "Tecido Epitelial Simples Pseudoestratificado",
   "naoestriado": "Tecido Muscular Não Estriado",
@@ -51,7 +50,7 @@
   "condrocitos": "Condrócitos",
   "ependimais": "Células Ependimais",
   "leydig": "Células de Leydig",
-  "cuboide": "Tecido Epitelial Simples Cuboide",
+  "cuboide": "Tecido Epitelial Simples Cubóide",
   "cerebelo": "Tecido Nervoso Central Cerebelo"
   }
   
