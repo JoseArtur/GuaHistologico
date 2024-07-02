@@ -7,6 +7,7 @@ import Carousel from "@itseasy21/react-elastic-carousel";
 import Image from "next/image";
 import titles from "@/app/utils/titles.json";
 import { TitlesType } from "@/app/utils/TitlesType";
+import { ClipLoader } from "react-spinners"; // Add this line to import the spinner
 
 export default function Page({ params }: { params: { p: string } }) {
   const pathTranslations: TitlesType = titles as TitlesType;
@@ -17,6 +18,7 @@ export default function Page({ params }: { params: { p: string } }) {
     new Map()
   );
   const [isMobile, setIsMobile] = useState(false);
+  const [loading, setLoading] = useState(true); // Add this state for loading
 
   const handleAnimation = (
     animationClass: string,
@@ -59,6 +61,7 @@ export default function Page({ params }: { params: { p: string } }) {
       }
       setPhotoOpacities(initialOpacities); // initialize opacity map with 0s
     }
+    setLoading(false); // Set loading to false after data is fetched
   };
 
   useEffect(() => {
@@ -84,60 +87,66 @@ export default function Page({ params }: { params: { p: string } }) {
         <h1 className="text-center text-2xl xl:text-5xl font-bold mb-20 border-gray-200 pt-40">
           {title}
         </h1>
-        <Carousel
-          className="carousel"
-          isRTL={false}
-          showArrows={!isMobile}
-          enableSwipe={isMobile}
-        >
-          {data.map((post, index) => (
-            <div key={index} className="carousel-item">
-              <div className="button-container">
-                {post.secondary_images?.map((image, i) => (
-                  <div key={i} className="toggle-switch">
-                    <input
-                      type="checkbox"
-                      id={`toggle${index}-${i + 1}`}
-                      className="toggle-input"
-                      onChange={() =>
-                        handleAnimation(`animate${index}-${i + 1}`, i, index)
-                      }
-                    />
-                    <label
-                      htmlFor={`toggle${index}-${i + 1}`}
-                      className="toggle-label"
-                    ></label>
-                    <div className="toggle-name">
-                      {post.secondary_images_names[i]}
+        {loading ? (
+          <div className="flex justify-center items-center h-96">
+            <ClipLoader size={50} color={"#123abc"} loading={loading} />
+          </div>
+        ) : (
+          <Carousel
+            className="carousel"
+            isRTL={false}
+            showArrows={!isMobile}
+            enableSwipe={isMobile}
+          >
+            {data.map((post, index) => (
+              <div key={index} className="carousel-item">
+                <div className="button-container">
+                  {post.secondary_images?.map((image, i) => (
+                    <div key={i} className="toggle-switch">
+                      <input
+                        type="checkbox"
+                        id={`toggle${index}-${i + 1}`}
+                        className="toggle-input"
+                        onChange={() =>
+                          handleAnimation(`animate${index}-${i + 1}`, i, index)
+                        }
+                      />
+                      <label
+                        htmlFor={`toggle${index}-${i + 1}`}
+                        className="toggle-label"
+                      ></label>
+                      <div className="toggle-name">
+                        {post.secondary_images_names[i]}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-              <div className={`relative w-full h-auto sm:w-full sm:h-auto`}>
-                <Image
-                  className="photo-1 object-cover object-center"
-                  layout="fill"
-                  src={post.primary_image}
-                  alt={post.title}
-                />
-                {post.secondary_images?.map((image, i) => (
+                  ))}
+                </div>
+                <div className={`relative w-full h-auto sm:w-full sm:h-auto`}>
                   <Image
-                    key={i}
-                    className={`photo${index}-${
-                      i + 1
-                    } object-cover object-center`}
+                    className="photo-1 object-cover object-center"
                     layout="fill"
-                    style={{
-                      opacity: (photoOpacities.get(index) || [0])[i] || 0,
-                    }}
-                    src={image}
+                    src={post.primary_image}
                     alt={post.title}
                   />
-                ))}
+                  {post.secondary_images?.map((image, i) => (
+                    <Image
+                      key={i}
+                      className={`photo${index}-${
+                        i + 1
+                      } object-cover object-center`}
+                      layout="fill"
+                      style={{
+                        opacity: (photoOpacities.get(index) || [0])[i] || 0,
+                      }}
+                      src={image}
+                      alt={post.title}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </Carousel>
+            ))}
+          </Carousel>
+        )}
       </div>
       <style jsx>{`
         .toggle-switch {
@@ -245,7 +254,6 @@ export default function Page({ params }: { params: { p: string } }) {
           }
         }
         @media (max-width: 2000px) {
-        
           .button-container {
             margin-top: 2em;
           }

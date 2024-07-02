@@ -1,7 +1,7 @@
 "use client";
-// Post.tsx
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { ClipLoader } from "react-spinners"; // Import the spinner
 
 export enum BgColor {
   LightBlue = "bg-blue-200",
@@ -57,6 +57,8 @@ const Post: React.FC<PostProps> = ({
   reversed,
   bgColor,
 }) => {
+  const [loading, setLoading] = useState(true); // Add loading state
+
   return (
     <a
       className={`photo-description ${
@@ -80,6 +82,11 @@ const Post: React.FC<PostProps> = ({
           </div>
         </div>
         <div className="image-layout flex-grow relative overflow-hidden">
+          {loading && (
+            <div className="flex justify-center items-center h-full w-full absolute">
+              <ClipLoader size={50} color={"#123abc"} loading={loading} />
+            </div>
+          )}
           <Image
             loader={imageLoader}
             layout="fill"
@@ -87,6 +94,7 @@ const Post: React.FC<PostProps> = ({
             src={imageUrl}
             alt={description}
             className="image-element"
+            onLoadingComplete={() => setLoading(false)} // Set loading to false when image loads
           />
         </div>
       </div>
@@ -97,12 +105,11 @@ const Post: React.FC<PostProps> = ({
 
         @media (min-width: 768px) {
           .image-layout {
-            
-          height: 400px;
+            height: 400px;
           }
           .flex {
             max-width: 2000px; /* Define a maximum width for the image */
-            }
+          }
         }
       `}</style>
     </a>

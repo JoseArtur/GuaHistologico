@@ -10,14 +10,7 @@ const TecidosPage: React.FC = () => {
       <div className="tecidos-page">
         <Header />
 
-        <Post
-          imageUrl="estruturas/arteria/estrutura_arteria_NUA.png?t=2024-07-01T20%3A22%3A13.648Z"
-          description=""
-          title="Artéria"
-          pageUrl="/posts/arteria"
-          reversed={false}
-          bgColor={BgColor.LightYellow}
-        />
+        
         <Post
           imageUrl="estruturas/fibras_purkinje/Estrutura_Fibras_Purkinje_NUA_A003_-_Fibras_de_purkinje.png?t=2024-07-01T20%3A28%3A55.531Z"
           description=""
@@ -63,8 +56,8 @@ const TecidosPage: React.FC = () => {
         <Post
           imageUrl="estruturas/veia/estrutura_veia_NUA.png"
           description=""
-          title="Veia"
-          pageUrl="/posts/veia"
+          title="Vasos"
+          pageUrl="/estruturas/vasos"
           reversed={false}
           bgColor={BgColor.LightCyan}
         />
