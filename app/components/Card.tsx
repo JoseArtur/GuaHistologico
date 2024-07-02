@@ -1,31 +1,49 @@
 'use client'
 import React from 'react';
 import Image from "next/image";
+import Link from 'next/link';
 
 interface CardProps {
   src: string;
   alt: string;
   href: string;
   title: string;
-}interface ImageLoaderProps {
+  excerpt?: string;
+}
+
+interface ImageLoaderProps {
   src: string;
   width: number;
   quality?: number;
 }
+
 const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
   return `https://woafrzymxudngxbeudts.supabase.co/storage/v1/object/public/Images/${src}?w=${width}&q=${quality || 75}`
 }
 
-const Card: React.FC<CardProps> = ({ src, alt, href, title }) => (
-  <a href={href} className="bg-white w-full sm:w-1/2 shadow rounded-lg overflow-hidden">
-    <Image loader={imageLoader} src={src} className="object-cover h-300 w-full" alt={alt} width={800} height={800} />
+const Card: React.FC<CardProps> = ({ src, alt, href, title, excerpt }) => (
+  <Link href={href} className="bg-white shadow rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+    <div className="aspect-w-16 aspect-h-9 relative">
+      <Image 
+        loader={imageLoader} 
+        src={src} 
+        alt={alt} 
+        layout="fill" 
+        objectFit="cover"
+      />
+    </div>
     <div className="p-6">
-      <h3 className="mt-3 font-bold xl:text-3xl pb-4 text-center">
+      <h3 className="font-bold text-xl mb-2 text-center">
         {title}
       </h3>
-      <div className="flex mt-4 gap-4 items-center"></div>
+      {excerpt && (
+        <p className="text-gray-600 text-sm mb-4">{excerpt}</p>
+      )}
+      <div className="text-purple-600 font-semibold text-center">
+        Saiba mais
+      </div>
     </div>
-  </a>
+  </Link>
 );
 
 export default Card;

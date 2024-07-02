@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Menu from './Menu';
-import { FiSearch, FiArrowLeft } from 'react-icons/fi';
+import { FiSearch, FiHome, FiMenu } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import '@/styles/globals.css';
@@ -25,9 +25,7 @@ export default function Header() {
     // Adicione outros posts aqui
   ];
 
-  const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
-  };
+  const toggleMenu = () => setMenuVisible(!menuVisible);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value;
@@ -61,67 +59,49 @@ export default function Header() {
   const breadcrumbs = generateBreadcrumbs();
 
   return (
-    <>
-      <header className="fixed top-0 w-full z-50 bg-purple p-3 xl:p-10 text-white flex flex-col">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <button type="button" onClick={() => router.back()} className="mr-4">
-              <FiArrowLeft className="text-xl xl:text-3xl" />
-            </button>
-            <div className="text-sm xl:text-3xl font-bold">
-              <Link href="/">Guia Histológico</Link>
-            </div>
-          </div>
-          <div className="flex items-center relative">
+    <header className="bg-purple-600 text-white shadow-md">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <Link href="/" className="text-xl font-bold hover:text-purple-200 transition-colors flex items-center">
+          <FiHome className="mr-2" />
+          Guia Histológico
+        </Link>
+        <div className="flex items-center space-x-4">
+          <div className="relative">
             <input
               type="text"
               value={searchTerm}
               onChange={handleSearchChange}
-              placeholder="Search..."
-              className="p-1 text-sm rounded bg-white text-black mr-2 xl:p-2 xl:text-base"
+              placeholder="Pesquisar..."
+              className="py-1 px-3 text-sm text-purple-900 bg-white rounded-full w-40 focus:outline-none focus:ring-2 focus:ring-purple-300"
             />
-            <FiSearch size={20} className="mr-6" />
-            <button onClick={toggleMenu} className={`hamburger ${menuVisible ? 'active' : ''}`}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            {searchTerm && (
-              <div className="absolute top-12 left-0 bg-white text-black w-full rounded shadow-lg max-h-96 overflow-y-auto">
-                {searchResults.length > 0 ? (
-                  searchResults.map((result, index) => (
-                    <Link key={index} href={result.url} className="flex items-center p-2 border-b hover:bg-gray-100" onClick={() => setSearchTerm('')}>
-                      <img src={`https://woafrzymxudngxbeudts.supabase.co/storage/v1/object/public/Images/${result.image}`} alt={result.title} className="w-12 h-12 object-cover mr-2 rounded" />
-                      <span>{result.title}</span>
-                    </Link>
-                  ))
-                ) : (
-                  <div className="p-2">No results found</div>
-                )}
-              </div>
-            )}
+            <FiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-600" />
           </div>
+          <button
+            onClick={toggleMenu}
+            className="text-white hover:text-purple-200 transition-colors focus:outline-none"
+          >
+            <FiMenu className="text-xl" />
+          </button>
         </div>
-        
-        {!pathname.startsWith('/posts') && (
-          <nav className="mt-2">
-            <ol className="list-reset flex text-white flex-wrap">
-              {breadcrumbs.map((breadcrumb, index) => (
-                <li key={index} className="flex items-center">
-                  <Link href={breadcrumb.url} className="text-white hover:text-gray-300">
-                    {breadcrumb.name}
-                  </Link>
-                  {index < breadcrumbs.length - 1 && <span className="mx-2">/</span>}
-                </li>
-              ))}
-            </ol>
-          </nav>
-        )}
-      </header>
-      <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} />
-      <div className="pb-10 sm:pb-10 xl:pb-20">
-
       </div>
-    </>
+      <nav className="container mx-auto px-4 py-2 text-sm">
+        <ol className="flex flex-wrap items-center space-x-2">
+          {breadcrumbs.map((breadcrumb, index) => (
+            <li key={index} className="flex items-center">
+              {index > 0 && <span className="mx-2 text-purple-300">/</span>}
+              <Link
+                href={breadcrumb.url}
+                className={`hover:text-purple-200 transition-colors ${
+                  index === breadcrumbs.length - 1 ? 'font-bold' : ''
+                }`}
+              >
+                {breadcrumb.name}
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <Menu menuVisible={menuVisible} toggleMenu={toggleMenu} />
+    </header>
   );
 }

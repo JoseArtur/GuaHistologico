@@ -40,7 +40,7 @@ const TecidosPage: React.FC = () => {
           title="Testículo"
           pageUrl="/posts/orgaos/testiculo"
           reversed={true}
-          bgColor={BgColor.LightPink}
+          bgColor={BgColor.LightGreen}
         />
         <Post
           imageUrl="orgaos/ovario/_rg_o_Ov_rio_Epit_lio_Germinativo__simples__NUA.png"
@@ -48,7 +48,7 @@ const TecidosPage: React.FC = () => {
           title="Ovário"
           pageUrl="/posts/orgaos/ovario"
           reversed={false}
-          bgColor={BgColor.LightSlateGray}
+          bgColor={BgColor.LightGreen}
         />
 
         <Post
@@ -57,7 +57,7 @@ const TecidosPage: React.FC = () => {
           title="Cérebro"
           pageUrl="/posts/orgaos/cerebro"
           reversed={true}
-          bgColor={BgColor.LightTeal}
+          bgColor={BgColor.LightGreen}
         />
 
         <Post
@@ -66,7 +66,7 @@ const TecidosPage: React.FC = () => {
           title="Esôfago"
           pageUrl="/posts/orgaos/esofago"
           reversed={false}
-          bgColor={BgColor.LightOrange}
+          bgColor={BgColor.LightGreen}
         />
         <Post
           imageUrl="default.jpg"
@@ -74,7 +74,7 @@ const TecidosPage: React.FC = () => {
           title="Estômago"
           pageUrl="/posts/orgaos/estomago"
           reversed={true}
-          bgColor={BgColor.LightSalmon}
+          bgColor={BgColor.LightGreen}
         />
         <Post
           imageUrl="default.jpg"
@@ -82,7 +82,7 @@ const TecidosPage: React.FC = () => {
           title="Traqueia"
           pageUrl="/posts/orgaos/traqueia"
           reversed={false}
-          bgColor={BgColor.LightCyan}
+          bgColor={BgColor.LightGreen}
         />
         <Post
           imageUrl="default.jpg"
@@ -90,7 +90,7 @@ const TecidosPage: React.FC = () => {
           title="Pele"
           pageUrl="/posts/orgaos/pele"
           reversed={true}
-          bgColor={BgColor.LightSkyBlue}
+          bgColor={BgColor.LightGreen}
         />
         <Post
           imageUrl="default.jpg"
@@ -98,7 +98,7 @@ const TecidosPage: React.FC = () => {
           title="Fígado"
           pageUrl="/posts/orgaos/figado"
           reversed={false}
-          bgColor={BgColor.LightSeaGreen}
+          bgColor={BgColor.LightGreen}
         />
         <Post
           imageUrl="orgaos/intestino_delgado/Orgao_Intestino_Delgado_a_Mucosa_b_submucosa_c_Muscular1_d_muscular2_e_serosa_NUA_C002_-_Estrutura_geral__orgao_.png"
@@ -106,7 +106,7 @@ const TecidosPage: React.FC = () => {
           title="Intestino Delgado"
           pageUrl="/posts/orgaos/intestino_delgado"
           reversed={true}
-          bgColor={BgColor.LightSlateGray}
+          bgColor={BgColor.LightGreen}
         />
         {/* Other components and elements */}
       </div>
