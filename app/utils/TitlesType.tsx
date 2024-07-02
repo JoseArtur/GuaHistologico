@@ -32,7 +32,7 @@ export type TitlesType = {
   cilindrico: string;
   cubicoide: string;
   colunar: string;
-  pseudoestratificado: string;
+  "pseudo-estratificado": string;
   naoestriado: string;
   cardiaco: string;
   esqueletico: string;
