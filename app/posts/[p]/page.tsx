@@ -109,10 +109,10 @@ export default function Page({ params }: { params: { p: string } }) {
     padding: 0 2rem;
   }
   .title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 5rem 0 0 0;
   }
   .carousel-wrapper {
     margin: 0 2rem;
@@ -206,10 +206,7 @@ export default function Page({ params }: { params: { p: string } }) {
       order: 1;
       padding-bottom: 75%; /* 4:3 aspect ratio for mobile */
     }
-    .title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
+
     .toggle-label {
       width: 50px;
       height: 28px;
