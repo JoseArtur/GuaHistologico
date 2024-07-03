@@ -55,62 +55,67 @@ export default function Page({ params }: { params: { p: string } }) {
           <ClipLoader size={50} color={"#123abc"} loading={loading} />
         </div>
       ) : (
+      <div className="carousel-wrapper">
         <Carousel className="carousel" isRTL={false} showArrows={!isMobile} enableSwipe={isMobile}>
-          {data.map((post, index) => (
-  <div key={index} className="carousel-item">
-  <div className="content-wrapper">
-    <div className="toggle-container">
-      {post.secondary_images?.map((_, i) => (
-        <div key={i} className="toggle-switch">
-          <input
-            type="checkbox"
-            id={`toggle${index}-${i + 1}`}
-            className="toggle-input"
-            onChange={() => handleAnimation(i, index)}
-          />
-          <label htmlFor={`toggle${index}-${i + 1}`} className="toggle-label"></label>
-          <span className="toggle-name" title={post.secondary_images_names[i]}>
-            {post.secondary_images_names[i]}
-          </span>
-        </div>
-      ))}
-    </div>
-    <div className="image-container">
-      <Image
-        className="photo"
-        layout="fill"
-        objectFit="contain"
-        src={post.primary_image}
-        alt={post.title}
-      />
-      {post.secondary_images?.map((image, i) => (
-        <Image
-          key={i}
-          className="photo"
-          layout="fill"
-          objectFit="contain"
-          style={{ opacity: (photoOpacities.get(index) || [])[i] || 0 }}
-          src={image}
-          alt={post.title}
-        />
-      ))}
-    </div>
-  </div>
-</div>
-          ))}
-        </Carousel>
+        {data.map((post, index) => (
+          <div key={index} className="carousel-item">
+            <div className="content-wrapper">
+              <div className="toggle-container">
+                {post.secondary_images?.map((_, i) => (
+                  <div key={i} className="toggle-switch">
+                    <input
+                      type="checkbox"
+                      id={`toggle${index}-${i + 1}`}
+                      className="toggle-input"
+                      onChange={() => handleAnimation(i, index)}
+                    />
+                    <label htmlFor={`toggle${index}-${i + 1}`} className="toggle-label"></label>
+                    <span className="toggle-name" title={post.secondary_images_names[i]}>
+                      {post.secondary_images_names[i]}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="image-container">
+                <Image
+                  className="photo"
+                  layout="fill"
+                  objectFit="contain"
+                  src={post.primary_image}
+                  alt={post.title}
+                />
+                {post.secondary_images?.map((image, i) => (
+                  <Image
+                    key={i}
+                    className="photo"
+                    layout="fill"
+                    objectFit="contain"
+                    style={{ opacity: (photoOpacities.get(index) || [])[i] || 0 }}
+                    src={image}
+                    alt={post.title}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </Carousel>
+      </div>
       )}
 <style jsx global>{`
   .post-page {
-    max-width: 1200px;
-    margin: 5rem auto;
-    padding: 0 1rem;
+    max-width: 2000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
   }
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  .carousel-wrapper {
+    margin: 0 2rem;
   }
   .carousel-item {
     display: flex;
@@ -175,12 +180,18 @@ export default function Page({ params }: { params: { p: string } }) {
     position: relative;
     width: calc(100% - 250px - 2rem);
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 50%; /* Adjust this value to make the image larger */
   }
   .photo {
     object-fit: contain;
   }
   @media (max-width: 768px) {
+    .post-page {
+      padding: 0 1rem;
+    }
+    .carousel-wrapper {
+      margin: 0;
+    }
     .content-wrapper {
       flex-direction: column;
     }
@@ -197,6 +208,7 @@ export default function Page({ params }: { params: { p: string } }) {
     }
     .title {
       font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
     .toggle-label {
       width: 50px;
