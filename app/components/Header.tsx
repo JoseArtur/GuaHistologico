@@ -6,7 +6,7 @@ import { FiSearch, FiArrowLeft } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import "@/styles/globals.css";
-import titles from "@/app/utils/titles.json";
+import header_titles from "@/app/utils/header_titles.json";
 import { TitlesType } from "@/app/utils/TitlesType";
 
 export default function Header() {
@@ -115,7 +115,7 @@ const posts = [
     const pathArray = pathname.split("/").filter((path) => path);
     const breadcrumbs = [{ name: "Início", url: "/" }]; // Add Home to breadcrumbs
 
-    const pathTranslations: TitlesType = titles as TitlesType;
+    const pathTranslations: TitlesType = header_titles as TitlesType;
 
     pathArray.forEach((path, index) => {
       const url = `/${pathArray.slice(0, index + 1).join("/")}`;
