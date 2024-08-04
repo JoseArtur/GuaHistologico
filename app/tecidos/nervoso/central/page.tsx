@@ -17,7 +17,7 @@ const EpitelialPage: React.FC = () => {
                */}{" "}
               <div className="flex gap-6 mt-20 m-2">
                 <Card
-                  src="default.jpg"
+                  src="orgaos/cerebelo/org_o_cerebelo_subst_ncia_cinzenta_Camadas_NUA.png?t=2024-07-01T19%3A11%3A05.321Z"
                   alt=""
                   href="/tecidos/nervoso/central/cerebelo"
                   title="Cerebelo"

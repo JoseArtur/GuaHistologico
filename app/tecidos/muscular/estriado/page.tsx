@@ -20,7 +20,7 @@ const EpitelialPage: React.FC = () => {
                   src="tecidos/muscular/cardiaco/tecido_muscular_card_aco__NUA.png?t=2024-07-01T20%3A04%3A26.636Z"
                   alt=""
                   href="/tecidos/muscular/estriado/cardiaco"
-                  title="Cardiaco"
+                  title="Cardíaco"
                 />
                 <Card
                   src="tecidos/muscular/esqueletico/tecido_muscular_estriado_esqueletico_NUA.png?t=2024-07-01T20%3A05%3A13.265Z"

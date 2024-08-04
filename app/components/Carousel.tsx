@@ -171,10 +171,8 @@ export default function Page({ params }: { params: { p: string } }) {
   .toggle-name {
     margin-left: 1rem;
     font-size: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 150px;
+    max-width: 100%;
+    flex:1;
   }
   .image-container {
     position: relative;
