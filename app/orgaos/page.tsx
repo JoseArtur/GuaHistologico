@@ -63,7 +63,7 @@ const TecidosPage: React.FC = () => {
         <Post
           imageUrl="orgaos/traqueia/orgao_traqueia_NUA.png"
           description=""
-          title="Traqueia"
+          title="Traquéia"
           pageUrl="/orgaos/traqueia"
           reversed={false}
           bgColor={BgColor.LightCyan}
