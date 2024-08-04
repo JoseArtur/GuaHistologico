@@ -21,13 +21,13 @@ const VasosPage: React.FC = () => {
                 <Card
                   src="estruturas/arteria/estrutura_arteria_NUA.png?t=2024-07-02T23%3A44%3A06.591Z"
                   alt=""
-                  href="/posts/arteria"
+                  href="/estruturas/vasos/arteria"
                   title="Artérias"
                 />
                 <Card
                   src="estruturas/veia/estrutura_veia_NUA.png"
                   alt=""
-                  href="/posts/veia"
+                  href="/estruturas/vasos/veia"
                   title="Veias"
                 />
               </div>

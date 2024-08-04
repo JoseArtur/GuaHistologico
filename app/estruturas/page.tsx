@@ -15,15 +15,15 @@ const TecidosPage: React.FC = () => {
           imageUrl="estruturas/fibras_purkinje/Estrutura_Fibras_Purkinje_NUA_A003_-_Fibras_de_purkinje.png?t=2024-07-01T20%3A28%3A55.531Z"
           description=""
           title="Fibras de Purkinje"
-          pageUrl="/posts/fibras_purkinje"
+          pageUrl="/estruturas/fibras_purkinje"
           reversed={true}
           bgColor={BgColor.LightPink}
         />
         <Post
           imageUrl="estruturas/microvilosidades/Estrutura_Microvilosidades_NUA_C006-_Microvilosidades_e_caliciformes.png?t=2024-07-01T20%3A31%3A14.639Z"
           description=""
-          title="Microvilosidades"
-          pageUrl="/posts/microvilosidades"
+          title="Borda em Escova"
+          pageUrl="/estruturas/borda-em-escova"
           reversed={false}
           bgColor={BgColor.LightSlateGray}
         />
@@ -32,7 +32,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="estruturas/cilios/estrutura_c_lios_NUA.png?t=2024-07-01T20%3A32%3A38.831Z"
           description=""
           title="Cílios"
-          pageUrl="/posts/cilios"
+          pageUrl="/estruturas/cilios"
           reversed={true}
           bgColor={BgColor.LightTeal}
         />
@@ -41,7 +41,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="estruturas/complexo_nervoso/Estrutura_plexo_nervoso_NUA_C003_-_Plexos_nervosos__orgao_ou_estrutura_.png"
           description=""
           title="Plexo Nervoso"
-          pageUrl="/posts/complexo_nervoso"
+          pageUrl="/estruturas/plexo_nervoso"
           reversed={false}
           bgColor={BgColor.LightOrange}
         />
@@ -49,7 +49,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="estruturas/discos_intercalares/Estrutura_discos_intercalares__DOIS__NUA_A002-_discos_intercalares_e_musc._estriado.png?t=2024-07-01T20%3A39%3A53.466Z"
           description=""
           title="Discos Intercalares"
-          pageUrl="/posts/discos_intercalares"
+          pageUrl="/estruturas/discos_intercalares"
           reversed={true}
           bgColor={BgColor.LightSlateGray}
         />
@@ -65,7 +65,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="estruturas/Lipofuscina/Estrutura_Lipofucscina_NUA_D001-_Lipofucsina.png?t=2024-07-01T20%3A47%3A39.656Z"
           description=""
           title="Lipofuscina"
-          pageUrl="/posts/lipofuscina"
+          pageUrl="/estruturas/lipofuscina"
           reversed={true}
           bgColor={BgColor.LightSkyBlue}
         />
@@ -73,7 +73,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="estruturas/foliculo_ovariano/Estrutura_Fol_culo_Ovariano_NUA.png?t=2024-07-01T20%3A48%3A42.511Z"
           description=""
           title="Folículo Ovariano"
-          pageUrl="/posts/foliculo_ovariano"
+          pageUrl="/estruturas/foliculo_ovariano"
           reversed={false}
           bgColor={BgColor.LightSeaGreen}
         />

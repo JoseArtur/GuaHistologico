@@ -13,36 +13,84 @@ export default function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState<
-    { title: string; url: string; image: string }[]
+    { title: string; url: string}[]
   >([]);
+// removed images for now image: string 
+const posts = [
+    { title: "Nervo", url: "/posts/nervo" },
+    { title: "Tecido Epitelial", url: "/tecidos/epitelial" },
+    { title: "Tecido Conjuntivo", url: "/tecidos/conjuntivo" },
+    { title: "Tecido Muscular", url: "/tecidos/muscular" },
+    { title: "Tecido Nervoso", url: "/tecidos/nervoso" },
+    // Additional posts
+    { title: "Tecido Propriamente Dito", url: "/tecidos/conjuntivo/propriamente-dito" },
+    { title: "Tecido Especializado", url: "/tecidos/conjuntivo/especializado" },
+    { title: "Tecido Ósseo", url: "/tecidos/conjuntivo/especializado/osseo" },
+    { title: "Tecido Cartilaginoso", url: "/tecidos/conjuntivo/especializado/cartilaginoso" },
+    { title: "Tecido Adiposo", url: "/tecidos/conjuntivo/especializado/adiposo" },
+    { title: "Tecido Hialino", url: "/tecidos/conjuntivo/especializado/cartilaginoso/hialino" },
+    { title: "Tecido Elástico", url: "/tecidos/conjuntivo/especializado/cartilaginoso/elastico" },
+    { title: "Tecido Compacto", url: "/tecidos/conjuntivo/especializado/osseo/compacto" },
+    { title: "Tecido Trabecular", url: "/tecidos/conjuntivo/especializado/osseo/trabecular" },
+    { title: "Tecido Denso", url: "/tecidos/conjuntivo/propriamente-dito/denso" },
+    { title: "Tecido Frouxo", url: "/tecidos/conjuntivo/propriamente-dito/frouxo" },
+    { title: "Tecido Denso Modelado", url: "/tecidos/conjuntivo/propriamente-dito/denso/modelado" },
+    { title: "Tecido Denso Não Modelado", url: "/tecidos/conjuntivo/propriamente-dito/denso/nao-modelado" },
+    { title: "Tecido Simples", url: "/tecidos/epitelial/simples" },
+    { title: "Tecido Estratificado", url: "/tecidos/epitelial/estratificado" },
+    { title: "Tecido Glandular", url: "/tecidos/epitelial/glandular" },
+    { title: "Tecido Pavimentoso", url: "/tecidos/epitelial/estratificado/pavimentoso" },
+    { title: "Tecido Cúbico", url: "/tecidos/epitelial/estratificado/cubico" },
+    { title: "Tecido Cilíndrico", url: "/tecidos/epitelial/estratificado/cilindrico" },
+    { title: "Tecido Cubóide", url: "/tecidos/epitelial/simples/cuboide" },
+    { title: "Tecido Colunar", url: "/tecidos/epitelial/simples/colunar" },
+    { title: "Tecido Pavimentoso", url: "/tecidos/epitelial/simples/pavimentoso" },
+    { title: "Tecido Pseudo-estratificado", url: "/tecidos/epitelial/simples/pseudo-estratificado" },
+    { title: "Tecido Estriado", url: "/tecidos/muscular/estriado" },
+    { title: "Tecido Não Estriado", url: "/tecidos/muscular/naoestriado" },
+    { title: "Tecido Estriado Cardíaco", url: "/tecidos/muscular/estriado/cardiaco" },
+    { title: "Tecido Estriado Esquelético", url: "/tecidos/muscular/estriado/esqueletico" },
+    { title: "Tecido Central", url: "/tecidos/nervoso/central" },
+    { title: "Tecido Periférico", url: "/tecidos/nervoso/periferico" },
+    { title: "Tecido Central Cerebelo", url: "/tecidos/nervoso/central/cerebelo" },
+    { title: "Tecido Central Medula", url: "/tecidos/nervoso/central/medula" },
+    { title: "Tecido Central Córtex", url: "/tecidos/nervoso/central/cortex" },
+    { title: "Tecido Periférico Nervo", url: "/tecidos/nervoso/periferico/nervo" },
+    { title: "Órgãos", url: "/orgaos" },
+    { title: "Coração", url: "/orgaos/coracao" },
+    { title: "Testículo", url: "/orgaos/testiculo" },
+    { title: "Ovário", url: "/orgaos/ovario" },
+    { title: "Cérebro", url: "/orgaos/cerebro" },
+    { title: "Esôfago", url: "/orgaos/esofago" },
+    { title: "Intestino Delgado", url: "/orgaos/intestino_delgado" },
+    { title: "Traqueia", url: "/orgaos/traqueia" },
+    { title: "Pele", url: "/orgaos/pele" },
+    { title: "Fígado", url: "/orgaos/figado" },
+    { title: "Rim", url: "/orgaos/rim" },
+    { title: "Pulmão", url: "/orgaos/pulmao" },
+    { title: "Estômago", url: "/orgaos/estomago" },
+    { title: "Epidídimo", url: "/orgaos/epididimo" },
+    { title: "Células", url: "/celulas" },
+    { title: "Adipócito", url: "/celulas/adipocito" },
+    { title: "Caliciformes", url: "/celulas/caliciformes" },
+    { title: "Condroicitos", url: "/celulas/condrocitos" },
+    { title: "Ependimais", url: "/celulas/ependimais" },
+    { title: "Leydig", url: "/celulas/leydig" },
+    { title: "Neurônio", url: "/celulas/neuronio" },
+    { title: "Estruturas", url: "/estruturas" },
+    { title: "Fibras Purkinkje", url: "/estruturas/fibras_purkinje" },
+    { title: "Borda em Escova", url: "/estruturas/borda-em-escova" },
+    { title: "Cílios", url: "/estruturas/cilios" },
+    { title: "Plexo Nervoso", url: "/estruturas/plexo_nervoso" },
+    { title: "Discos Intercalares", url: "/estruturas/discos_intercalares" },
+    { title: "Vasos", url: "/estruturas/vasos" },
+    { title: "Lipofuscina", url: "/estruturas/lipofuscina" },
+    { title: "Folículo Ovariano", url: "/estruturas/foliculo_ovariano" },
 
-  const posts = [
-    { title: "Nervo", url: "/posts/nervo", image: "default.jpg" },
-    {
-      title: "Tecido Epitelial",
-      url: "/tecidos/epitelial",
-      image: "default.jpg",
-    },
-    {
-      title: "Tecido Conjuntivo",
-      url: "/tecidos/conjuntivo",
-      image:
-        "tecidos/conjuntivo/tecido_conjuntivo_especializado_hematopoietico_nua_A001-Coracao-HE_26.8x.jpg",
-    },
-    {
-      title: "Tecido Muscular",
-      url: "/tecidos/muscular",
-      image: "default.jpg",
-    },
-    {
-      title: "Tecido Nervoso",
-      url: "/tecidos/nervoso",
-      image:
-        '"tecidos/nervoso/Tecido_Nervoso_Cerebelo_subst_ncia_cinzenta_Camadas_NUA.png"',
-    },
-    // Adicione outros posts aqui
+
+    // Add other posts here if needed
   ];
-
+  
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
@@ -124,11 +172,6 @@ export default function Header() {
                       className="flex items-center p-2 border-b hover:bg-gray-100"
                       onClick={() => setSearchTerm("")}
                     >
-                      <img
-                        src={`https://woafrzymxudngxbeudts.supabase.co/storage/v1/object/public/Images/${result.image}`}
-                        alt={result.title}
-                        className="w-12 h-12 object-cover mr-2 rounded"
-                      />
                       <span>{result.title}</span>
                     </Link>
                   ))
@@ -165,3 +208,10 @@ export default function Header() {
     </>
   );
 }
+
+// add this on top of                       <span>{result.title}</span>
+//  <img
+//src={`https://woafrzymxudngxbeudts.supabase.co/storage/v1/object/public/Images/${result.image}`}
+//alt={result.title}
+//className="w-12 h-12 object-cover mr-2 rounded"
+///>

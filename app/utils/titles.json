@@ -24,7 +24,7 @@
   "frouxo": "Tecido Conjuntivo Propiamente Dito Frouxo",
   "modelado": "Tecido Conjuntivo Propriamente Dito Denso Modelado",
   "nao-modelado": "Tecido Conjuntivo Propriamente Dito Denso Não Modelado",
-  "glandular": "Tecido Glandular",
+  "glandular": "Tecido Epitelial Glandular",
   "pavimentoso": "Tecido Epitelial Estratificado Pavimentoso",
   "cubico": "Tecido Epitelial Estratificado Cúbico",
   "cilindrico": "Tecido Epitelial Estratificado Cilíndrico",
@@ -38,8 +38,8 @@
   "cilios": "Cílios",
   "arteria": "Artéria",
   "fibras_purkinje": "Fibras de Purkinje",
-  "microvilosidades": "Microvilosidades",
-  "complexo_nervoso": "Plexo Nervoso",
+  "borda-em-escova": "Borda em Escova",
+  "plexo_nervoso": "Plexo Nervoso",
   "discos_intercalares": "Discos Intercalares",
   "veia" : "Veia",
   "lipofuscina": "Lipofuscina",
@@ -51,6 +51,10 @@
   "ependimais": "Células Ependimais",
   "leydig": "Células de Leydig",
   "cuboide": "Tecido Epitelial Simples Cubóide",
-  "cerebelo": "Tecido Nervoso Central Cerebelo"
+  "cerebelo": "Tecido Nervoso Central Cerebelo",
+  "neuronio" : "Neurônio",
+  "paneth" : "Célula de Paneth",
+  "orgaos" : "Órgãos",
+  "propriamente-dito" : "Propriamente Dito"
   }
   

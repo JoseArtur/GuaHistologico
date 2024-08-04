@@ -19,13 +19,13 @@ const DensoPage: React.FC = () => {
                 <Card
                   src="tecidos/conjuntivo/propriamente_dito/tecido_conjuntivo_propriamente_dito_denso_modelado_tend_o_NUA.png?t=2024-07-01T19%3A46%3A20.641Z"
                   alt=""
-                  href="/posts/modelado"
+                  href="/tecidos/conjuntivo/propriamente_dito/denso/modelado"
                   title="Modelado"
                 />
                 <Card
                   src="tecidos/conjuntivo/propriamente_dito/tecido_conjuntivo_propriamente_dito_denso_n_o_modelado_NUA.png"
                   alt=""
-                  href="/posts/nao-modelado"
+                  href="/tecidos/conjuntivo/propriamente_dito/denso/nao-modelado"
                   title="Não Modelado"
                 />
               </div>

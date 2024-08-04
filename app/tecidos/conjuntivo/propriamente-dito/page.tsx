@@ -25,7 +25,7 @@ const PropriamenteDitoPage: React.FC = () => {
                 <Card
                   src="tecidos/conjuntivo/propriamente_dito/tecido_conjuntivo_propriamente_dito_Frouxo_NUA.png"
                   alt=""
-                  href="/posts/frouxo"
+                  href="/tecidos/conjuntivo/propriamente-dito/frouxo"
                   title="Frouxo"
                 />
               </div>

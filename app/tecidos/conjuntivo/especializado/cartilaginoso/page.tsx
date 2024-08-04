@@ -20,13 +20,13 @@ const ComponentsPage: React.FC = () => {
                 <Card
                   src="tecidos/conjuntivo/especializado/cartilaginoso/tecido_conjuntivo_especializado_Cartilagem_Hialina_NUA.png?t=2024-07-01T19%3A55%3A29.277Z"
                   alt=""
-                  href="/posts/hialino"
+                  href="/tecidos/conjuntivo/especializado/cartilaginoso/hialino"
                   title="Hialino"
                 />
                 <Card
                   src="default.jpg"
                   alt=""
-                  href="/posts/elastico"
+                  href="/tecidos/conjuntivo/especializado/cartilaginoso/elastico"
                   title="Elástico"
                 />
               </div>

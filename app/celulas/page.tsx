@@ -14,7 +14,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="celulas/adipocito/c_lula_Adip_cito_NUA.png"
           description=""
           title="Adipócito"
-          pageUrl="/posts/adipocito"
+          pageUrl="/celulas/adipocito"
           reversed={false}
           bgColor={BgColor.LightYellow}
         />
@@ -22,15 +22,15 @@ const TecidosPage: React.FC = () => {
           imageUrl="celulas/caliciformes/celulas_caliciformes_NUA_C006-_Microvilosidades_e_caliciformes.png"
           description=""
           title="Células Caliciformes"
-          pageUrl="/posts/caliciformes"
+          pageUrl="/celulas/caliciformes"
           reversed={true}
           bgColor={BgColor.LightPink}
         />
         <Post
           imageUrl="celulas/condrocitos/C_lulas_Condr_citos_NUA.png"
           description=""
-          title="Condrocitos"
-          pageUrl="/posts/condrocitos"
+          title="Condrócitos"
+          pageUrl="/celulas/condrocitos"
           reversed={false}
           bgColor={BgColor.LightSlateGray}
         />
@@ -38,7 +38,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="celulas/ependimais/c_lulas_C_lulas_Ependimais__c_rebro___NUA.png"
           description=""
           title="Células Ependimais"
-          pageUrl="/posts/ependimais"
+          pageUrl="/celulas/ependimais"
           reversed={true}
           bgColor={BgColor.LightTeal}
         />
@@ -46,7 +46,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="celulas/leydig/c_lulas_C_lulas_de_Leydig__c_lulas_intersticiais__NUA.png"
           description=""
           title="Células de Leydig"
-          pageUrl="/posts/leydig"
+          pageUrl="/celulas/leydig"
           reversed={false}
           bgColor={BgColor.LightOrange}
         />
@@ -54,7 +54,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="celulas/neuronio/c_lula_Neuronio_Multipolar_NUA.png"
           description=""
           title="Neurônio"
-          pageUrl="/posts/neuronio"
+          pageUrl="/celulas/neuronio"
           reversed={true}
           bgColor={BgColor.LightSlateGray}
         />
@@ -62,7 +62,7 @@ const TecidosPage: React.FC = () => {
           imageUrl="celulas/paneth/Celula_Paneth_NUA_C001_-_Celula_Paneth_.png"
           description=""
           title="Células de Paneth"
-          pageUrl="/posts/paneth"
+          pageUrl="/celulas/paneth"
           reversed={false}
           bgColor={BgColor.LightCyan}
         />

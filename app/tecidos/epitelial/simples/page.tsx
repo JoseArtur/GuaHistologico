@@ -19,25 +19,25 @@ const EpitelialPage: React.FC = () => {
                 <Card
                   src="tecidos/epitelial/simples/cuboide/Tecido_Epitelial_Simples_Cuboide__NUA.png?t=2024-07-01T19%3A31%3A30.929Z"
                   alt=""
-                  href="/posts/cuboide"
+                  href="/tecidos/epitelial/simples/cuboide"
                   title="Cuboide"
                 />
                 <Card
                   src="default.jpg"
                   alt=""
-                  href="/posts/colunar"
+                  href="/tecidos/epitelial/simples/colunar"
                   title="Colunar"
                 />
                 <Card
                   src="default.jpg"
                   alt=""
-                  href="/posts/pavimentoso"
+                  href="/tecidos/epitelial/simples/pavimentoso"
                   title="Pavimentoso"
                 />
                 <Card
                   src="tecidos/epitelial/simples/pseudo-estratificado/tecido_epitelial_simples_pseudoestratificado_NUA.png?t=2024-07-01T19%3A37%3A20.615Z"
                   alt=""
-                  href="/posts/pseudo-estratificado"
+                  href="/tecidos/epitelial/simples/pseudo-estratificado"
                   title="Pseudo estratificado"
                 />
               </div>

@@ -30,9 +30,9 @@ const ComponentsPage: React.FC = () => {
                   title="Cartilaginoso"
                 />
                 <Card
-                  src="default.jpg"
+                  src="tecidos/conjuntivo/especializado/adiposo/tecido_conjuntivo_especializado_adiposo_NUA.png"
                   alt=""
-                  href="/posts/adiposo"
+                  href="/tecidos/conjuntivo/especializado/adiposo"
                   title="Tecido Adiposo"
                 />
               </div>

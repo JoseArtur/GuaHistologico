@@ -31,7 +31,7 @@ const EpitelialPage: React.FC = () => {
                 <Card
                   src="/tecidos/epitelial/tecido_epitelial_glandular_glandulaexocrinacomposta2_nua_e B003-Esofago-HE_19.4x.jpg"
                   alt=""
-                  href="/posts/glandular"
+                  href="/tecidos/epitelial/glandular"
                   title="Glandular"
                 />
               </div>

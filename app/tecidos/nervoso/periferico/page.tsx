@@ -19,7 +19,7 @@ const EpitelialPage: React.FC = () => {
                 <Card
                   src="default.jpg"
                   alt=""
-                  href="/posts/nervo"
+                  href="/tecidos/nervoso/periferico/nervo"
                   title="Nervo"
                 />
               </div>

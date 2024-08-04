@@ -20,13 +20,13 @@ const ComponentsPage: React.FC = () => {
                 <Card
                   src="default.jpg"
                   alt=""
-                  href="/posts/compacto"
+                  href="/tecidos/conjuntivo/especializado/osseo/compacto"
                   title="Compacto"
                 />
                 <Card
                   src="default.jpg"
                   alt=""
-                  href="/posts/trabecular"
+                  href="/tecidos/conjuntivo/especializado/osseo/trabecular"
                   title="Trabecular"
                 />
               </div>
