@@ -150,7 +150,7 @@ const posts = [
               type="text"
               value={searchTerm}
               onChange={handleSearchChange}
-              placeholder="Search..."
+              placeholder="Pesquisar..."
               className="p-1 text-sm sm:text-2xl rounded bg-white text-black mr-2 ml-4 xl:p-2 xl:text-base"
             />
             <FiSearch size={20} className="mr-6" />
