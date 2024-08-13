@@ -15,9 +15,9 @@ const EpitelialPage: React.FC = () => {
               </h2>
               {/*       <p className="text-center mt-4 font-medium text-slate-500">OUR NEWS FEED</p>
                */}{" "}
-              <div className="flex gap-6 mt-20 m-2">
+              <div className="flex justify-center items-center gap-6 mt-20 m-2">
                 <Card
-                  src="default.jpg"
+                  src="/tecidos/nervoso/periferico/nervo/NERVO-NUA.png"
                   alt=""
                   href="/tecidos/nervoso/periferico/nervo"
                   title="Nervo"

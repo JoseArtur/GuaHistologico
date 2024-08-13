@@ -26,6 +26,7 @@
   "nao-modelado": "Tecido Conjuntivo Propriamente Dito Denso Não Modelado",
   "glandular": "Tecido Epitelial Glandular",
   "pavimentoso": "Tecido Epitelial Estratificado Pavimentoso",
+  "pavimentoso-simples": "Tecido Epitelial Simples Pavimentoso",
   "cubico": "Tecido Epitelial Estratificado Cúbico",
   "cilindrico": "Tecido Epitelial Estratificado Cilíndrico",
   "colunar": "Tecido Epitelial Simples Colunar",

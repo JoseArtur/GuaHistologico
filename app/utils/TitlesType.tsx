@@ -28,6 +28,7 @@ export type TitlesType = {
   "nao-modelado": string;
   glandular: string;
   pavimentoso: string;
+  "pavimentoso-simples": string;
   cubico: string;
   cilindrico: string;
   cuboide: string;

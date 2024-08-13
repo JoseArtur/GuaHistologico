@@ -77,7 +77,7 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightSkyBlue}
         />
         <Post
-          imageUrl="orgaos/figado/orgao___F_gado___geral_NUA_.png?t=2024-07-02T23%3A38%3A06.264Z"
+          imageUrl="orgaos/figado/orgao-figado-geral-lobulos-hepaticos_NUA.png"
           description=""
           title="Fígado"
           pageUrl="/orgaos/figado"
