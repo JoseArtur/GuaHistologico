@@ -35,6 +35,12 @@ const ComponentsPage: React.FC = () => {
                   href="/tecidos/conjuntivo/especializado/adiposo"
                   title="Tecido Adiposo"
                 />
+                <Card
+                  src="tecidos/conjuntivo/especializado/hematopoietico/tecido_conjuntivo_especializado_hematopoietico_NUA_A001-Coracao-HE_26.8x.jpg"
+                  alt=""
+                  href="/tecidos/conjuntivo/especializado/hematopoietico"
+                  title="Hematopoiético"
+                />
               </div>
             </div>
           </div>

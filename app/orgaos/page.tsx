@@ -84,14 +84,21 @@ const TecidosPage: React.FC = () => {
           reversed={false}
           bgColor={BgColor.LightSeaGreen}
         />
-
         <Post
-          imageUrl="orgaos/rim/orgao___Rim___Visao_Geral_NUA.png?t=2024-07-02T23%3A37%3A15.252Z"
+          imageUrl="orgaos/rim/orgao-rim-visao_geral_NUA.png"
           description=""
           title="Rim"
           pageUrl="/orgaos/rim"
           reversed={true}
           bgColor={BgColor.LightBlue}
+        />
+        <Post
+          imageUrl="/tecidos/epitelial/glandular/Tecido_Epitelial_Gl_ndula_End_crina_Cordonal_Ilhota_Langerhans_NUA.png"
+          description=""
+          title="Pancreas"
+          pageUrl="/orgaos/pancreas"
+          reversed={false}
+          bgColor={BgColor.LightSalmon}
         />
         <Post
           imageUrl="orgaos/pulmao/orgao___Pulm_o__vis_o_GEral_NUA_.png?t=2024-07-02T23%3A37%3A39.303Z"

@@ -77,6 +77,15 @@ const TecidosPage: React.FC = () => {
           reversed={false}
           bgColor={BgColor.LightSeaGreen}
         />
+        <Post
+          imageUrl="estruturas/vilosidade/Estrutura_Vilosidade_NUA.png"
+          description=""
+          title="Vilosidades"
+          pageUrl="/estruturas/vilosidades"
+          reversed={true}
+          bgColor={BgColor.LightMagenta}
+        />
+
 
       
         {/* Other components and elements */}
