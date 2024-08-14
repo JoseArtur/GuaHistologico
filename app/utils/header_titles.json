@@ -27,6 +27,7 @@
     "nao-modelado": "Não Modelado",
     "glandular": "Glandular",
     "pavimentoso": "Pavimentoso",
+    "pavimentoso-simples": "Pavimentoso Simples",
     "cubico": "Cúbico",
     "cilindrico": "Cilíndrico",
     "colunar": "Colunar",
@@ -59,6 +60,7 @@
     "propriamente-dito" : "Propriamente Dito",
     "osseo" : "Ósseo",
     "hematopoietico": "Hematopoiético",
-    "vilosidades": "Velosidades"
+    "vilosidades": "Velosidades",
+    "pancreas": "Pancreas"
     }
     
