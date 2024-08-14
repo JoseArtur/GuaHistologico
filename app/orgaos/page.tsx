@@ -116,14 +116,6 @@ const TecidosPage: React.FC = () => {
           reversed={true}
           bgColor={BgColor.LightSalmon}
         />
-        <Post
-          imageUrl="orgaos/epididimo/orgao___Epid_dimo_vis_o_Geral___NUA_.png?t=2024-07-02T23%3A36%3A20.051Z"
-          description=""
-          title="Epidídimo"
-          pageUrl="/orgaos/epididimo"
-          reversed={false}
-          bgColor={BgColor.LightPink}
-        />
         {/* Other components and elements */}
       </div>
       {/* Other components and elements */}

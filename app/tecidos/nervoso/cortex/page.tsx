@@ -11,29 +11,11 @@ const EpitelialPage: React.FC = () => {
           <div className="min-h-28 ">
             <div className="max-w-screen-xl mx-auto py-4">
               <h2 className="font-bold text-center text-6xl  text-slate-700 font-display pt-10">
-                Tecido Nervoso
+                Tecido Nervoso Córtex
               </h2>
               {/*       <p className="text-center mt-4 font-medium text-slate-500">OUR NEWS FEED</p>
                */}{" "}
               <div className="flex gap-6 mt-20 m-2">
-                <Card
-                  src="orgaos/cerebelo/org_o_cerebelo_subst_ncia_cinzenta_Camadas_NUA.png?t=2024-07-01T19%3A11%3A05.321Z"
-                  alt=""
-                  href="/tecidos/nervoso/central"
-                  title="Central"
-                />
-                <Card
-                  src="default.jpg"
-                  alt=""
-                  href="/tecidos/nervoso/periferico"
-                  title="Periférico"
-                />
-                <Card
-                  src="default.jpg"
-                  alt=""
-                  href="/tecidos/nervoso/cortex"
-                  title="Córtex"
-                />
               </div>
             </div>
           </div>
