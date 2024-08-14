@@ -39,4 +39,7 @@ export type TitlesType = {
   esqueletico: string;
   cortex: string;
   medula: string;
+  vilosidades: string;
+  pancreas: string;
+  hematopoietico: string;
 };
