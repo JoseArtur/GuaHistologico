@@ -101,11 +101,11 @@ const TecidosPage: React.FC = () => {
           bgColor={BgColor.LightSalmon}
         />
         <Post
-          imageUrl="orgaos/pulmao/orgao___Pulm_o__vis_o_GEral_NUA_.png?t=2024-07-02T23%3A37%3A39.303Z"
+          imageUrl="orgaos/pulmao/S010-pulmao-pneumocito-II-NUA.png"
           description=""
           title="Pulmão"
           pageUrl="/orgaos/pulmao"
-          reversed={false}
+          reversed={true}
           bgColor={BgColor.White}
         />
         <Post
@@ -113,7 +113,7 @@ const TecidosPage: React.FC = () => {
           description=""
           title="Estômago"
           pageUrl="/orgaos/estomago"
-          reversed={true}
+          reversed={false}
           bgColor={BgColor.LightSalmon}
         />
         {/* Other components and elements */}
