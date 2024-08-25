@@ -23,7 +23,7 @@ const EpitelialPage: React.FC = () => {
                   title="Central"
                 />
                 <Card
-                  src="default.jpg"
+                  src="/tecidos/nervoso/periferico/nervo/NERVO-2-NUA.png"
                   alt=""
                   href="/tecidos/nervoso/periferico"
                   title="Periférico"

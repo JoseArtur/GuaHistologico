@@ -23,7 +23,7 @@ const EpitelialPage: React.FC = () => {
                   title="Simples"
                 />
                 <Card
-                  src="default.jpg"
+                  src="tecidos/epitelial/estratificado/pavimentoso/tecido_epitelial_estratificado_pavimentoso_nao_querantinizado_nua.png"
                   alt=""
                   href="/tecidos/epitelial/estratificado"
                   title="Estratificado"
