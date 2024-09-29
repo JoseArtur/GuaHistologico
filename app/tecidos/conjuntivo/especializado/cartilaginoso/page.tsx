@@ -23,12 +23,12 @@ const ComponentsPage: React.FC = () => {
                   href="/tecidos/conjuntivo/especializado/cartilaginoso/hialino"
                   title="Hialino"
                 />
-                <Card
+            {/*     <Card
                   src="default.jpg"
                   alt=""
                   href="/tecidos/conjuntivo/especializado/cartilaginoso/elastico"
                   title="Elástico"
-                />
+                /> */}
               </div>
             </div>
           </div>
