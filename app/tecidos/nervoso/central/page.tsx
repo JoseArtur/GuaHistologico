@@ -22,18 +22,18 @@ const EpitelialPage: React.FC = () => {
                   href="/tecidos/nervoso/central/cerebelo"
                   title="Cerebelo"
                 />
-                <Card
+           {/*      <Card
                   src="default.jpg"
                   alt=""
                   href="/tecidos/nervoso/central/medula"
                   title="Medula"
-                />
-                <Card
+                /> */}
+          {/*       <Card
                   src="default.jpg"
                   alt=""
                   href="/tecidos/nervoso/central/cortex"
                   title="Córtex"
-                />
+                /> */}
               </div>
             </div>
           </div>
